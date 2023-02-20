@@ -1,0 +1,57 @@
+module InputUnit #(parameter DIGITS = 4)
+(
+	input clk,
+	input load,
+	input reset,
+	input [3:0] row,
+	output [3:0] col,
+	output [8:0] led
+);
+
+wire valid;
+wire [3:0] singleBCD;
+wire [(DIGITS*4)-1:0] allBCD;
+wire validFlag;
+wire [7:0] binary;
+wire [7:0] tcBinary;
+
+keypad_base L0
+(
+	.clk(clk),
+	.row(row),
+	.col(col),
+	.value(singleBCD),
+	.valid(valid)
+);
+
+shift_reg #(.COUNT(DIGITS)) L1
+(
+	.trig(valid),
+	.in(singleBCD),
+	.out(allBCD),
+	.reset(reset)
+);
+
+BCD2BinarySM L2
+(
+	.BCD(allBCD),
+	.binarySM(binary)
+);
+
+CheckValue L3
+(
+	.BCD(allBCD),
+	.checkedFlag(validFlag)
+);
+
+Complement_I L4
+(
+	.in(binary),
+	.out(tcBinary)
+);
+
+assign led = {validFlag, tcBinary};
+
+
+
+endmodule

@@ -1,0 +1,68 @@
+module OutputUnit
+(
+	input [7:0] SW,
+	output [6:0] HEX3, HEX2, HEX1, HEX0
+);
+
+wire [7:0] Invert;
+wire [3:0] onesWireI;
+wire [3:0] tensWireI;
+wire [3:0] hundredsWireI;
+
+
+wire [3:0] onesWireO;
+wire [3:0] tensWireO;
+wire [3:0] hundredsWireO;
+wire [3:0] signWireO;
+
+Complement_O L0
+(
+	.in(SW),
+	.out(Invert)
+);
+
+BinaryToBCD L1
+(
+	.A(Invert),
+	.ONES(onesWireI),
+	.TENS(tensWireI),
+	.HUNDREDS(hundredsWireI)
+);
+
+SignPlace L2
+(
+	.SignBit(SW[7]),
+	.onesI(onesWireI),
+	.tensI(tensWireI),
+	.hundredsI(hundredsWireI),
+	.onesO(onesWireO),
+	.tensO(tensWireO),
+	.hundredsO(hundredsWireO),
+	.signO(signWireO)
+);
+
+DecimalDisplay onesDisplay
+(
+	.in(onesWireO),
+	.out(HEX0)
+);
+
+DecimalDisplay tensDisplay
+(
+	.in(tensWireO),
+	.out(HEX1)
+);
+
+DecimalDisplay hundredsDisplay
+(
+	.in(hundredsWireO),
+	.out(HEX2)
+);
+
+DecimalDisplay signDisplay
+(
+	.in(signWireO),
+	.out(HEX3)
+);
+
+endmodule
