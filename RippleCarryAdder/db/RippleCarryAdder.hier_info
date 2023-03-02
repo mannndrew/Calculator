@@ -1,0 +1,60 @@
+|RippleCarryAdder
+A[0] => A[0].IN1
+A[1] => FullAdder:S[1].a
+A[2] => FullAdder:S[2].a
+A[3] => FullAdder:S[3].a
+B[0] => B[0].IN1
+B[1] => FullAdder:S[1].b
+B[2] => FullAdder:S[2].b
+B[3] => FullAdder:S[3].b
+cin => cin.IN1
+Sum[0] <= FullAdder:Sini.sum
+Sum[1] <= FullAdder:S[1].sum
+Sum[2] <= FullAdder:S[2].sum
+Sum[3] <= FullAdder:S[3].sum
+
+
+|RippleCarryAdder|FullAdder:Sini
+a => cout.IN0
+a => cout.IN0
+b => cout.IN1
+b => cout.IN1
+cin => cout.IN1
+cin => sum.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RippleCarryAdder|FullAdder:S[1]
+a => cout.IN0
+a => cout.IN0
+b => cout.IN1
+b => cout.IN1
+cin => cout.IN1
+cin => sum.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RippleCarryAdder|FullAdder:S[2]
+a => cout.IN0
+a => cout.IN0
+b => cout.IN1
+b => cout.IN1
+cin => cout.IN1
+cin => sum.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RippleCarryAdder|FullAdder:S[3]
+a => cout.IN0
+a => cout.IN0
+b => cout.IN1
+b => cout.IN1
+cin => cout.IN1
+cin => sum.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+

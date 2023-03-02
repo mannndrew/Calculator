@@ -1,0 +1,82 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/simulation/qsim
+vCarryLookAhead
+Z1 !s110 1677738028
+!i10b 1
+!s100 YXEC8fd;4@iaE5;mon[;g1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Iea03:d1XN1E=e<4AC_4AF0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1677738027
+Z5 8CarryLookAhead.vo
+Z6 FCarryLookAhead.vo
+!i122 12
+L0 32 474
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1677738028.000000
+Z9 !s107 CarryLookAhead.vo|
+Z10 !s90 -work|work|CarryLookAhead.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+n@carry@look@ahead
+vCarryLookAhead_vlg_vec_tst
+R1
+!i10b 1
+!s100 5UFXa6?Kl:c5nd[heZCFh0
+R2
+I@<7Zih8zAN?CBMGNAViaL0
+R3
+R0
+R4
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 13
+L0 30 68
+R7
+r1
+!s85 0
+31
+R8
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R11
+R12
+n@carry@look@ahead_vlg_vec_tst
+vhard_block
+R1
+!i10b 1
+!s100 D_nXDJY7FkQUH]zzXSC=;1
+R2
+I6a_E5_?gYcbXZY44ZO;nZ2
+R3
+R0
+R4
+R5
+R6
+!i122 12
+L0 507 45
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
