@@ -1,5 +1,5 @@
 Flow report for CarryLookAhead
-Thu Mar 02 00:20:27 2023
+Thu Mar 02 01:23:25 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Mar 02 00:20:27 2023       ;
+; Flow Status                        ; Successful - Thu Mar 02 01:23:23 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; CarryLookAhead                              ;
 ; Top-level Entity Name              ; CarryLookAhead                              ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 9 / 49,760 ( < 1 % )                        ;
-;     Total combinational functions  ; 9 / 49,760 ( < 1 % )                        ;
+; Total logic elements               ; 11 / 49,760 ( < 1 % )                       ;
+;     Total combinational functions  ; 11 / 49,760 ( < 1 % )                       ;
 ;     Dedicated logic registers      ; 0 / 49,760 ( 0 % )                          ;
 ; Total registers                    ; 0                                           ;
 ; Total pins                         ; 13 / 360 ( 4 % )                            ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/02/2023 00:18:13 ;
+; Start date & time ; 03/02/2023 01:23:09 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; CarryLookAhead      ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 264086602466675.167773789321940        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 264086602466675.167774178909072        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -95,16 +95,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 4772 MB             ; 00:00:14                           ;
-; Fitter               ; 00:00:04     ; 1.0                     ; 6587 MB             ; 00:00:12                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 4686 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:01     ; 1.1                     ; 4958 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4632 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4632 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4641 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4632 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4641 MB             ; 00:00:00                           ;
-; Total                ; 00:00:14     ; --                      ; --                  ; 00:00:29                           ;
+; Analysis & Synthesis ; 00:00:05     ; 1.0                     ; 4771 MB             ; 00:00:14                           ;
+; Fitter               ; 00:00:05     ; 1.0                     ; 6584 MB             ; 00:00:12                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 4687 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:01     ; 1.1                     ; 4955 MB             ; 00:00:01                           ;
+; Total                ; 00:00:13     ; --                      ; --                  ; 00:00:29                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -117,11 +112,6 @@ https://fpgasoftware.intel.com/eula.
 ; Fitter               ; Maninator        ; Windows 10 ; 10.0       ; x86_64         ;
 ; Assembler            ; Maninator        ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; Maninator        ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; Maninator        ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; Maninator        ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; Maninator        ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; Maninator        ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; Maninator        ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -132,11 +122,6 @@ quartus_map --read_settings_files=on --write_settings_files=off CarryLookAhead -
 quartus_fit --read_settings_files=off --write_settings_files=off CarryLookAhead -c CarryLookAhead
 quartus_asm --read_settings_files=off --write_settings_files=off CarryLookAhead -c CarryLookAhead
 quartus_sta CarryLookAhead -c CarryLookAhead
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off CarryLookAhead -c CarryLookAhead --vector_source=C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/Waveform.vwf --testbench_file=C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/simulation/qsim/Waveform.vwf.vt
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off CarryLookAhead -c CarryLookAhead --vector_source=C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/Waveform.vwf --testbench_file=C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/simulation/qsim/Waveform.vwf.vt
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/simulation/qsim/ CarryLookAhead -c CarryLookAhead
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off CarryLookAhead -c CarryLookAhead --vector_source=C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/Waveform.vwf --testbench_file=C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/simulation/qsim/Waveform.vwf.vt
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/simulation/qsim/ CarryLookAhead -c CarryLookAhead
 
 
 

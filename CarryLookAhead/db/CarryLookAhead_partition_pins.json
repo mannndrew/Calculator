@@ -20,6 +20,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "cin",
+					"strict" : false
+				},
+				{
 					"name" : "A[0]",
 					"strict" : false
 				},
@@ -28,15 +32,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "cin",
+					"name" : "A[1]",
 					"strict" : false
 				},
 				{
 					"name" : "B[1]",
-					"strict" : false
-				},
-				{
-					"name" : "A[1]",
 					"strict" : false
 				},
 				{
@@ -48,11 +48,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "B[3]",
+					"name" : "A[3]",
 					"strict" : false
 				},
 				{
-					"name" : "A[3]",
+					"name" : "B[3]",
 					"strict" : false
 				}
 			]
