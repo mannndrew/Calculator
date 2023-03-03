@@ -1,17 +1,17 @@
 |CarryLookAhead
-A[0] => ~NO_FANOUT~
-A[1] => ~NO_FANOUT~
-A[2] => p.IN0
+A[0] => p[0].IN0
+A[1] => p[1].IN0
+A[2] => p[2].IN0
 A[3] => ~NO_FANOUT~
-B[0] => ~NO_FANOUT~
-B[1] => ~NO_FANOUT~
-B[2] => p.IN1
+B[0] => p[0].IN1
+B[1] => p[1].IN1
+B[2] => p[2].IN1
 B[3] => ~NO_FANOUT~
 cin => ~NO_FANOUT~
 Sum[0] <= <GND>
 Sum[1] <= <GND>
 Sum[2] <= <GND>
 Sum[3] <= <GND>
-test <= p.DB_MAX_OUTPUT_PORT_TYPE
+test <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 

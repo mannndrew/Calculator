@@ -26,30 +26,33 @@ assign c[0] = cin;
 //	c[2] = g[1] | (p[1] & g[0]) | (p[1] & p[0] & cin),
 //	c[3] = g[2] | (p[2] & g[1]) | (p[2] & p[1] & g[0]) | (p[2] & p[1] & p[0] & cin);
 
+wire [63:0]test1;
+wire [63:0]test2;
+
 genvar i, j;
 generate
 
 
 for (i = 1; i < N; i = i + 1) begin : outer
 
-wire test[63:0];
-assign test[i] = p[i-1];
-assign c[i] = test[i];
+
+assign test1[i] = p[i-1];
+
 
 //assign c[i] = g[i-1] | &p[i-1:0] & cin;							//WORK IN PROGRESS
 
-	for (j = 0; j < N; j = j + 1) begin : inner
-		
-		test[j]
-		
-	end
+//	for (j = 0; j < N; j = j + 1) begin : inner
+//		
+//		test[j]
+//		
+//	end
 
 end
 
 
 endgenerate
 
-assign test = c[3];
+assign test = |test1[3:0];
 //FullAdder S0(.a(A[0]), .b(B[0]), .cin(c[0]), .sum(Sum[0]));
 //FullAdder S1(.a(A[1]), .b(B[1]), .cin(c[1]), .sum(Sum[1]));
 //FullAdder S2(.a(A[2]), .b(B[2]), .cin(c[2]), .sum(Sum[2]));
