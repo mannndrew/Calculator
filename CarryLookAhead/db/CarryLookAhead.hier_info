@@ -1,59 +1,17 @@
 |CarryLookAhead
-A[0] => p[0].IN0
-A[0] => g[0].IN0
-A[0] => FullAdder:S[0].a
-A[1] => p[1].IN0
-A[1] => g[1].IN0
-A[1] => FullAdder:S[1].a
-A[2] => p[2].IN0
-A[2] => g[2].IN0
-A[2] => FullAdder:S[2].a
-A[3] => FullAdder:S[3].a
-B[0] => p[0].IN1
-B[0] => g[0].IN1
-B[0] => FullAdder:S[0].b
-B[1] => p[1].IN1
-B[1] => g[1].IN1
-B[1] => FullAdder:S[1].b
-B[2] => p[2].IN1
-B[2] => g[2].IN1
-B[2] => FullAdder:S[2].b
-B[3] => FullAdder:S[3].b
-cin => c.IN1
-cin => c.IN1
-cin => c.IN1
-cin => FullAdder:S[0].cin
-Sum[0] <= FullAdder:S[0].sum
-Sum[1] <= FullAdder:S[1].sum
-Sum[2] <= FullAdder:S[2].sum
-Sum[3] <= FullAdder:S[3].sum
-
-
-|CarryLookAhead|FullAdder:S[0]
-a => sum.IN0
-b => sum.IN1
-cin => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|CarryLookAhead|FullAdder:S[1]
-a => sum.IN0
-b => sum.IN1
-cin => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|CarryLookAhead|FullAdder:S[2]
-a => sum.IN0
-b => sum.IN1
-cin => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|CarryLookAhead|FullAdder:S[3]
-a => sum.IN0
-b => sum.IN1
-cin => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => ~NO_FANOUT~
+A[1] => ~NO_FANOUT~
+A[2] => p.IN0
+A[3] => ~NO_FANOUT~
+B[0] => ~NO_FANOUT~
+B[1] => ~NO_FANOUT~
+B[2] => p.IN1
+B[3] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+Sum[0] <= <GND>
+Sum[1] <= <GND>
+Sum[2] <= <GND>
+Sum[3] <= <GND>
+test <= p.DB_MAX_OUTPUT_PORT_TYPE
 
 

@@ -1,5 +1,5 @@
 Flow report for CarryLookAhead
-Thu Mar 02 01:23:25 2023
+Fri Mar 03 01:25:34 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,18 +41,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Mar 02 01:23:23 2023       ;
+; Flow Status                        ; Successful - Fri Mar 03 01:25:32 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; CarryLookAhead                              ;
 ; Top-level Entity Name              ; CarryLookAhead                              ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 11 / 49,760 ( < 1 % )                       ;
-;     Total combinational functions  ; 11 / 49,760 ( < 1 % )                       ;
+; Total logic elements               ; 2 / 49,760 ( < 1 % )                        ;
+;     Total combinational functions  ; 2 / 49,760 ( < 1 % )                        ;
 ;     Dedicated logic registers      ; 0 / 49,760 ( 0 % )                          ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 13 / 360 ( 4 % )                            ;
+; Total pins                         ; 14 / 360 ( 4 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                       ;
 ; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/02/2023 01:23:09 ;
+; Start date & time ; 03/03/2023 01:25:19 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; CarryLookAhead      ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 264086602466675.167774178909072        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 264086602466675.167782831922480        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -95,11 +95,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:05     ; 1.0                     ; 4771 MB             ; 00:00:14                           ;
-; Fitter               ; 00:00:05     ; 1.0                     ; 6584 MB             ; 00:00:12                           ;
+; Analysis & Synthesis ; 00:00:05     ; 1.0                     ; 4760 MB             ; 00:00:13                           ;
+; Fitter               ; 00:00:04     ; 1.0                     ; 6582 MB             ; 00:00:12                           ;
 ; Assembler            ; 00:00:02     ; 1.0                     ; 4687 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:01     ; 1.1                     ; 4955 MB             ; 00:00:01                           ;
-; Total                ; 00:00:13     ; --                      ; --                  ; 00:00:29                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.1                     ; 4930 MB             ; 00:00:01                           ;
+; Total                ; 00:00:13     ; --                      ; --                  ; 00:00:28                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
