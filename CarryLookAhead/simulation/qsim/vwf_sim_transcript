@@ -26,7 +26,7 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Thu Mar 02 00:20:26 2023
+    Info: Processing started: Sat Mar 04 01:24:12 2023
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off CarryLookAhead -c CarryLookAhead --vector_source=C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/Waveform.vwf --testbench_file=C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/simulation/qsim/Waveform.vwf.vt
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
@@ -55,13 +55,13 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Thu Mar 02 00:20:27 2023
+    Info: Processing started: Sat Mar 04 01:24:13 2023
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/simulation/qsim/ CarryLookAhead -c CarryLookAhead
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file CarryLookAhead.vo in folder "C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4641 megabytes
-    Info: Processing ended: Thu Mar 02 00:20:27 2023
+    Info: Processing ended: Sat Mar 04 01:24:13 2023
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
@@ -85,27 +85,27 @@ Reading pref.tcl
 # ** Warning: (vlib-34) Library already exists at "work".
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:20:28 on Mar 02,2023
+# Start time: 01:24:14 on Mar 04,2023
 # vlog -work work CarryLookAhead.vo 
 # -- Compiling module CarryLookAhead
 # -- Compiling module hard_block
 # 
 # Top level modules:
 # 	CarryLookAhead
-# End time: 00:20:28 on Mar 02,2023, Elapsed time: 0:00:00
+# End time: 01:24:14 on Mar 04,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:20:28 on Mar 02,2023
+# Start time: 01:24:14 on Mar 04,2023
 # vlog -work work Waveform.vwf.vt 
 # -- Compiling module CarryLookAhead_vlg_vec_tst
 # 
 # Top level modules:
 # 	CarryLookAhead_vlg_vec_tst
-# End time: 00:20:28 on Mar 02,2023, Elapsed time: 0:00:00
+# End time: 01:24:14 on Mar 04,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -c -t 1ps -L fiftyfivenm_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.CarryLookAhead_vlg_vec_tst 
-# Start time: 00:20:28 on Mar 02,2023
+# Start time: 01:24:14 on Mar 04,2023
 # Loading work.CarryLookAhead_vlg_vec_tst
 # Loading work.CarryLookAhead
 # Loading work.hard_block
@@ -115,15 +115,15 @@ Reading pref.tcl
 # Loading fiftyfivenm_ver.fiftyfivenm_unvm
 # Loading fiftyfivenm_ver.fiftyfivenm_adcblock
 # ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\~QUARTUS_CREATED_ADC1~ '.  Expected 8, found 7.
-#    Time: 0 ps  Iteration: 0  Instance: /CarryLookAhead_vlg_vec_tst/i1/\~QUARTUS_CREATED_ADC1~  File: CarryLookAhead.vo Line: 452
-# ** Warning: (vsim-3722) CarryLookAhead.vo(452): [TFMPC] - Missing connection for port 'clk_dft'.
+#    Time: 0 ps  Iteration: 0  Instance: /CarryLookAhead_vlg_vec_tst/i1/\~QUARTUS_CREATED_ADC1~  File: CarryLookAhead.vo Line: 469
+# ** Warning: (vsim-3722) CarryLookAhead.vo(469): [TFMPC] - Missing connection for port 'clk_dft'.
 # ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\~QUARTUS_CREATED_ADC2~ '.  Expected 8, found 7.
-#    Time: 0 ps  Iteration: 0  Instance: /CarryLookAhead_vlg_vec_tst/i1/\~QUARTUS_CREATED_ADC2~  File: CarryLookAhead.vo Line: 475
-# ** Warning: (vsim-3722) CarryLookAhead.vo(475): [TFMPC] - Missing connection for port 'clk_dft'.
+#    Time: 0 ps  Iteration: 0  Instance: /CarryLookAhead_vlg_vec_tst/i1/\~QUARTUS_CREATED_ADC2~  File: CarryLookAhead.vo Line: 492
+# ** Warning: (vsim-3722) CarryLookAhead.vo(492): [TFMPC] - Missing connection for port 'clk_dft'.
 # after#26
-# ** Note: $finish    : Waveform.vwf.vt(49)
+# ** Note: $finish    : Waveform.vwf.vt(51)
 #    Time: 1 us  Iteration: 0  Instance: /CarryLookAhead_vlg_vec_tst
-# End time: 00:20:28 on Mar 02,2023, Elapsed time: 0:00:00
+# End time: 01:24:14 on Mar 04,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 4
 
 Completed successfully. 
@@ -136,7 +136,7 @@ Reading C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/simulation/qsi
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/simulation/qsim/CarryLookAhead_20230302002028.sim.vwf
+Writing the resulting VWF to C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/simulation/qsim/CarryLookAhead_20230304012414.sim.vwf
 
 Finished VCD to VWF conversion.
 

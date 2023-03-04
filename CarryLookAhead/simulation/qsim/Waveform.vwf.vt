@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "03/02/2023 00:20:27"
+// Generated on "03/04/2023 01:24:12"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          CarryLookAhead
 // 
@@ -35,6 +35,7 @@ reg [3:0] B;
 reg cin;
 // wires                                               
 wire [3:0] Sum;
+wire test;
 
 // assign statements (if any)                          
 CarryLookAhead i1 (
@@ -42,7 +43,8 @@ CarryLookAhead i1 (
 	.A(A),
 	.B(B),
 	.Sum(Sum),
-	.cin(cin)
+	.cin(cin),
+	.test(test)
 );
 initial 
 begin 
@@ -56,7 +58,7 @@ end
 // A[ 2 ]
 initial
 begin
-	A[2] = 1'b0;
+	A[2] = 1'b1;
 end 
 // A[ 1 ]
 initial
@@ -81,7 +83,7 @@ end
 // B[ 1 ]
 initial
 begin
-	B[1] = 1'b1;
+	B[1] = 1'b0;
 end 
 // B[ 0 ]
 initial

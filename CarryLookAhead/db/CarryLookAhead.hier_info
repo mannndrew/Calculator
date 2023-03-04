@@ -1,17 +1,119 @@
 |CarryLookAhead
 A[0] => p[0].IN0
+A[0] => outer[1].term[0].IN0
+A[0] => FullAdder:S[0].a
 A[1] => p[1].IN0
+A[1] => outer[2].term[0].IN0
+A[1] => FullAdder:S[1].a
 A[2] => p[2].IN0
-A[3] => ~NO_FANOUT~
+A[2] => outer[3].term[0].IN0
+A[2] => FullAdder:S[2].a
+A[3] => p[3].IN0
+A[3] => outer[4].term[0].IN0
+A[3] => FullAdder:S[3].a
+A[4] => p[4].IN0
+A[4] => outer[5].term[0].IN0
+A[4] => FullAdder:S[4].a
+A[5] => p[5].IN0
+A[5] => outer[6].term[0].IN0
+A[5] => FullAdder:S[5].a
+A[6] => p[6].IN0
+A[6] => g[6].IN0
+A[6] => FullAdder:S[6].a
+A[7] => FullAdder:S[7].a
 B[0] => p[0].IN1
+B[0] => outer[1].term[0].IN1
+B[0] => FullAdder:S[0].b
 B[1] => p[1].IN1
+B[1] => outer[2].term[0].IN1
+B[1] => FullAdder:S[1].b
 B[2] => p[2].IN1
-B[3] => ~NO_FANOUT~
-cin => ~NO_FANOUT~
-Sum[0] <= <GND>
-Sum[1] <= <GND>
-Sum[2] <= <GND>
-Sum[3] <= <GND>
-test <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+B[2] => outer[3].term[0].IN1
+B[2] => FullAdder:S[2].b
+B[3] => p[3].IN1
+B[3] => outer[4].term[0].IN1
+B[3] => FullAdder:S[3].b
+B[4] => p[4].IN1
+B[4] => outer[5].term[0].IN1
+B[4] => FullAdder:S[4].b
+B[5] => p[5].IN1
+B[5] => outer[6].term[0].IN1
+B[5] => FullAdder:S[5].b
+B[6] => p[6].IN1
+B[6] => g[6].IN1
+B[6] => FullAdder:S[6].b
+B[7] => FullAdder:S[7].b
+cin => outer[1].term[1].IN1
+cin => outer[2].term[2].IN1
+cin => outer[3].term[3].IN1
+cin => outer[4].term[4].IN1
+cin => outer[5].term[5].IN1
+cin => outer[6].term[6].IN1
+cin => outer[7].term[7].IN1
+cin => FullAdder:S[0].cin
+Sum[0] <= FullAdder:S[0].sum
+Sum[1] <= FullAdder:S[1].sum
+Sum[2] <= FullAdder:S[2].sum
+Sum[3] <= FullAdder:S[3].sum
+Sum[4] <= FullAdder:S[4].sum
+Sum[5] <= FullAdder:S[5].sum
+Sum[6] <= FullAdder:S[6].sum
+Sum[7] <= FullAdder:S[7].sum
+
+
+|CarryLookAhead|FullAdder:S[0]
+a => sum.IN0
+b => sum.IN1
+cin => sum.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CarryLookAhead|FullAdder:S[1]
+a => sum.IN0
+b => sum.IN1
+cin => sum.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CarryLookAhead|FullAdder:S[2]
+a => sum.IN0
+b => sum.IN1
+cin => sum.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CarryLookAhead|FullAdder:S[3]
+a => sum.IN0
+b => sum.IN1
+cin => sum.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CarryLookAhead|FullAdder:S[4]
+a => sum.IN0
+b => sum.IN1
+cin => sum.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CarryLookAhead|FullAdder:S[5]
+a => sum.IN0
+b => sum.IN1
+cin => sum.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CarryLookAhead|FullAdder:S[6]
+a => sum.IN0
+b => sum.IN1
+cin => sum.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CarryLookAhead|FullAdder:S[7]
+a => sum.IN0
+b => sum.IN1
+cin => sum.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 

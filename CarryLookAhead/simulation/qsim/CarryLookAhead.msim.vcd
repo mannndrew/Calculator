@@ -3,7 +3,7 @@ $comment
 		vcd file CarryLookAhead.msim.vcd -direction
 $end
 $date
-	Thu Mar 02 00:20:28 2023
+	Sat Mar 04 01:24:14 2023
 $end
 $version
 	ModelSim Version 2020.1
@@ -20,81 +20,85 @@ $var wire 1 $ Sum [3] $end
 $var wire 1 % Sum [2] $end
 $var wire 1 & Sum [1] $end
 $var wire 1 ' Sum [0] $end
+$var wire 1 ( test $end
 
 $scope module i1 $end
-$var wire 1 ( gnd $end
-$var wire 1 ) vcc $end
-$var wire 1 * unknown $end
-$var tri1 1 + devclrn $end
-$var tri1 1 , devpor $end
-$var tri1 1 - devoe $end
-$var wire 1 . ~QUARTUS_CREATED_GND~I_combout $end
-$var wire 1 / ~QUARTUS_CREATED_UNVM~~busy $end
-$var wire 1 0 ~QUARTUS_CREATED_ADC1~~eoc $end
-$var wire 1 1 ~QUARTUS_CREATED_ADC2~~eoc $end
-$var wire 1 2 Sum[0]~output_o $end
-$var wire 1 3 Sum[1]~output_o $end
-$var wire 1 4 Sum[2]~output_o $end
-$var wire 1 5 Sum[3]~output_o $end
-$var wire 1 6 B[0]~input_o $end
-$var wire 1 7 A[0]~input_o $end
-$var wire 1 8 cin~input_o $end
-$var wire 1 9 S0|sum~0_combout $end
-$var wire 1 : c[1]~1_combout $end
-$var wire 1 ; B[1]~input_o $end
-$var wire 1 < A[1]~input_o $end
-$var wire 1 = c[1]~0_combout $end
-$var wire 1 > S1|sum~combout $end
-$var wire 1 ? c[2]~2_combout $end
+$var wire 1 ) gnd $end
+$var wire 1 * vcc $end
+$var wire 1 + unknown $end
+$var tri1 1 , devclrn $end
+$var tri1 1 - devpor $end
+$var tri1 1 . devoe $end
+$var wire 1 / ~QUARTUS_CREATED_GND~I_combout $end
+$var wire 1 0 ~QUARTUS_CREATED_UNVM~~busy $end
+$var wire 1 1 ~QUARTUS_CREATED_ADC1~~eoc $end
+$var wire 1 2 ~QUARTUS_CREATED_ADC2~~eoc $end
+$var wire 1 3 Sum[0]~output_o $end
+$var wire 1 4 Sum[1]~output_o $end
+$var wire 1 5 Sum[2]~output_o $end
+$var wire 1 6 Sum[3]~output_o $end
+$var wire 1 7 test~output_o $end
+$var wire 1 8 A[0]~input_o $end
+$var wire 1 9 cin~input_o $end
+$var wire 1 : B[0]~input_o $end
+$var wire 1 ; S[0]|sum~combout $end
+$var wire 1 < B[1]~input_o $end
+$var wire 1 = A[1]~input_o $end
+$var wire 1 > WideOr0~0_combout $end
+$var wire 1 ? S[1]|sum~combout $end
 $var wire 1 @ A[2]~input_o $end
 $var wire 1 A B[2]~input_o $end
-$var wire 1 B S2|sum~0_combout $end
-$var wire 1 C B[3]~input_o $end
-$var wire 1 D A[3]~input_o $end
-$var wire 1 E S3|sum~0_combout $end
-$var wire 1 F S3|sum~combout $end
+$var wire 1 B S[2]|sum~0_combout $end
+$var wire 1 C S[2]|sum~1_combout $end
+$var wire 1 D S[2]|sum~2_combout $end
+$var wire 1 E A[3]~input_o $end
+$var wire 1 F B[3]~input_o $end
+$var wire 1 G S[3]|sum~0_combout $end
+$var wire 1 H S[3]|sum~1_combout $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-b11 !
-b11 "
+b111 !
+b1 "
 0#
 0'
-1&
-1%
-0$
+0&
+0%
+1$
 0(
-1)
-x*
-1+
+0)
+1*
+x+
 1,
 1-
-0.
-z/
+1.
+0/
 z0
 z1
-02
-13
-14
+z2
+03
+04
 05
 16
-17
-08
+07
+18
 09
-0:
-1;
-1<
+1:
+0;
+0<
 1=
 1>
-1?
-0@
+0?
+1@
 0A
 1B
-0C
+1C
 0D
 0E
 0F
+0G
+1H
 $end
 #1000000

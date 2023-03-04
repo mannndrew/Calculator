@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CarryLookAhead
-Fri Mar 03 17:06:13 2023
+Sat Mar 04 01:37:46 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -44,16 +44,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Mar 03 17:06:13 2023       ;
+; Analysis & Synthesis Status        ; Successful - Sat Mar 04 01:37:46 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; CarryLookAhead                              ;
 ; Top-level Entity Name              ; CarryLookAhead                              ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 2                                           ;
-;     Total combinational functions  ; 2                                           ;
+; Total logic elements               ; 16                                          ;
+;     Total combinational functions  ; 16                                          ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 14                                          ;
+; Total pins                         ; 25                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -154,8 +154,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 12          ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -170,6 +170,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                               ; Library ;
 +----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
+; FullAdder.v                      ; yes             ; User Verilog HDL File  ; C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/FullAdder.v      ;         ;
 ; CarryLookAhead.v                 ; yes             ; User Verilog HDL File  ; C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/CarryLookAhead.v ;         ;
 +----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
 
@@ -179,40 +180,48 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 2         ;
+; Estimated Total logic elements              ; 16        ;
 ;                                             ;           ;
-; Total combinational functions               ; 2         ;
+; Total combinational functions               ; 16        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 1         ;
-;     -- 3 input functions                    ; 1         ;
-;     -- <=2 input functions                  ; 0         ;
+;     -- 4 input functions                    ; 5         ;
+;     -- 3 input functions                    ; 8         ;
+;     -- <=2 input functions                  ; 3         ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 2         ;
+;     -- normal mode                          ; 16        ;
 ;     -- arithmetic mode                      ; 0         ;
 ;                                             ;           ;
 ; Total registers                             ; 0         ;
 ;     -- Dedicated logic registers            ; 0         ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 14        ;
+; I/O pins                                    ; 25        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
-; Maximum fan-out node                        ; WideOr0~0 ;
-; Maximum fan-out                             ; 1         ;
-; Total fan-out                               ; 22        ;
-; Average fan-out                             ; 0.73      ;
+; Maximum fan-out node                        ; cin~input ;
+; Maximum fan-out                             ; 3         ;
+; Total fan-out                               ; 83        ;
+; Average fan-out                             ; 1.26      ;
 +---------------------------------------------+-----------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                   ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+----------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name    ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+----------------+--------------+
-; |CarryLookAhead            ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 14   ; 0            ; 0          ; |CarryLookAhead     ; CarryLookAhead ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+----------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                              ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------+----------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name            ; Entity Name    ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------+----------------+--------------+
+; |CarryLookAhead            ; 16 (2)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 25   ; 0            ; 0          ; |CarryLookAhead                ; CarryLookAhead ; work         ;
+;    |FullAdder:S[0]|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CarryLookAhead|FullAdder:S[0] ; FullAdder      ; work         ;
+;    |FullAdder:S[1]|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CarryLookAhead|FullAdder:S[1] ; FullAdder      ; work         ;
+;    |FullAdder:S[2]|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CarryLookAhead|FullAdder:S[2] ; FullAdder      ; work         ;
+;    |FullAdder:S[3]|        ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CarryLookAhead|FullAdder:S[3] ; FullAdder      ; work         ;
+;    |FullAdder:S[4]|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CarryLookAhead|FullAdder:S[4] ; FullAdder      ; work         ;
+;    |FullAdder:S[5]|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CarryLookAhead|FullAdder:S[5] ; FullAdder      ; work         ;
+;    |FullAdder:S[6]|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CarryLookAhead|FullAdder:S[6] ; FullAdder      ; work         ;
+;    |FullAdder:S[7]|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CarryLookAhead|FullAdder:S[7] ; FullAdder      ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -236,7 +245,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+-------+-------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                  ;
 +----------------+-------+-------------------------------------------------------+
-; N              ; 4     ; Signed Integer                                        ;
+; N              ; 8     ; Signed Integer                                        ;
 +----------------+-------+-------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -246,15 +255,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 14                          ;
-; cycloneiii_lcell_comb ; 3                           ;
-;     normal            ; 3                           ;
-;         0 data inputs ; 1                           ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 1                           ;
+; boundary_port         ; 25                          ;
+; cycloneiii_lcell_comb ; 16                          ;
+;     normal            ; 16                          ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 8                           ;
+;         4 data inputs ; 5                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.56                        ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 4.58                        ;
 +-----------------------+-----------------------------+
 
 
@@ -273,39 +282,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Mar 03 17:06:05 2023
+    Info: Processing started: Sat Mar 04 01:37:40 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CarryLookAhead -c CarryLookAhead
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file fulladder.v
     Info (12023): Found entity 1: FullAdder File: C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/FullAdder.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file carrylookahead.v
     Info (12023): Found entity 1: CarryLookAhead File: C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/CarryLookAhead.v Line: 1
 Info (12127): Elaborating entity "CarryLookAhead" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at CarryLookAhead.v(11): object "g" assigned a value but never read File: C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/CarryLookAhead.v Line: 11
-Warning (10036): Verilog HDL or VHDL warning at CarryLookAhead.v(12): object "c" assigned a value but never read File: C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/CarryLookAhead.v Line: 12
-Warning (10030): Net "test1[0]" at CarryLookAhead.v(29) has no driver or initial value, using a default initial value '0' File: C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/CarryLookAhead.v Line: 29
-Warning (10034): Output port "Sum" at CarryLookAhead.v(6) has no driver File: C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/CarryLookAhead.v Line: 6
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "Sum[0]" is stuck at GND File: C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/CarryLookAhead.v Line: 6
-    Warning (13410): Pin "Sum[1]" is stuck at GND File: C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/CarryLookAhead.v Line: 6
-    Warning (13410): Pin "Sum[2]" is stuck at GND File: C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/CarryLookAhead.v Line: 6
-    Warning (13410): Pin "Sum[3]" is stuck at GND File: C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/CarryLookAhead.v Line: 6
+Info (12128): Elaborating entity "FullAdder" for hierarchy "FullAdder:S[0]" File: C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/CarryLookAhead.v Line: 68
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 3 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "A[3]" File: C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/CarryLookAhead.v Line: 3
-    Warning (15610): No output dependent on input pin "B[3]" File: C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/CarryLookAhead.v Line: 4
-    Warning (15610): No output dependent on input pin "cin" File: C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/CarryLookAhead.v Line: 5
-Info (21057): Implemented 16 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 9 input pins
-    Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 2 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 4773 megabytes
-    Info: Processing ended: Fri Mar 03 17:06:13 2023
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:10
+Info (21057): Implemented 41 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 17 input pins
+    Info (21059): Implemented 8 output pins
+    Info (21061): Implemented 16 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4770 megabytes
+    Info: Processing ended: Sat Mar 04 01:37:46 2023
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:13
 
 
