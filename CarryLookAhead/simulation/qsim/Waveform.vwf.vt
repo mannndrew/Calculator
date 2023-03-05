@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "03/04/2023 01:24:12"
+// Generated on "03/04/2023 22:25:44"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          CarryLookAhead
 // 
@@ -30,12 +30,11 @@
 module CarryLookAhead_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg [3:0] A;
-reg [3:0] B;
+reg [7:0] A;
+reg [7:0] B;
 reg cin;
 // wires                                               
-wire [3:0] Sum;
-wire test;
+wire [7:0] Sum;
 
 // assign statements (if any)                          
 CarryLookAhead i1 (
@@ -43,12 +42,31 @@ CarryLookAhead i1 (
 	.A(A),
 	.B(B),
 	.Sum(Sum),
-	.cin(cin),
-	.test(test)
+	.cin(cin)
 );
 initial 
 begin 
 #1000000 $finish;
+end 
+// A[ 7 ]
+initial
+begin
+	A[7] = 1'b0;
+end 
+// A[ 6 ]
+initial
+begin
+	A[6] = 1'b1;
+end 
+// A[ 5 ]
+initial
+begin
+	A[5] = 1'b0;
+end 
+// A[ 4 ]
+initial
+begin
+	A[4] = 1'b0;
 end 
 // A[ 3 ]
 initial
@@ -58,27 +76,47 @@ end
 // A[ 2 ]
 initial
 begin
-	A[2] = 1'b1;
+	A[2] = 1'b0;
 end 
 // A[ 1 ]
 initial
 begin
-	A[1] = 1'b1;
+	A[1] = 1'b0;
 end 
 // A[ 0 ]
 initial
 begin
 	A[0] = 1'b1;
 end 
+// B[ 7 ]
+initial
+begin
+	B[7] = 1'b0;
+end 
+// B[ 6 ]
+initial
+begin
+	B[6] = 1'b0;
+end 
+// B[ 5 ]
+initial
+begin
+	B[5] = 1'b0;
+end 
+// B[ 4 ]
+initial
+begin
+	B[4] = 1'b1;
+end 
 // B[ 3 ]
 initial
 begin
-	B[3] = 1'b0;
+	B[3] = 1'b1;
 end 
 // B[ 2 ]
 initial
 begin
-	B[2] = 1'b0;
+	B[2] = 1'b1;
 end 
 // B[ 1 ]
 initial
@@ -88,7 +126,7 @@ end
 // B[ 0 ]
 initial
 begin
-	B[0] = 1'b1;
+	B[0] = 1'b0;
 end 
 
 // cin

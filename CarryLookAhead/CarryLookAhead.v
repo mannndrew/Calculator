@@ -34,7 +34,7 @@ generate
 
 for (i = 1; i < N; i = i + 1) begin : outer
 
-wire [N-1:0] term;
+wire [i:0] term;
 
 
 	for (j = 0; j < i+1; j = j + 1) begin : inner			// First Term

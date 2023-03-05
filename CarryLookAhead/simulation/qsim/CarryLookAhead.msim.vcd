@@ -3,7 +3,7 @@ $comment
 		vcd file CarryLookAhead.msim.vcd -direction
 $end
 $date
-	Sat Mar 04 01:24:14 2023
+	Sat Mar 04 22:25:49 2023
 $end
 $version
 	ModelSim Version 2020.1
@@ -13,92 +13,136 @@ $timescale
 $end
 
 $scope module CarryLookAhead_vlg_vec_tst $end
-$var reg 4 ! A [3:0] $end
-$var reg 4 " B [3:0] $end
+$var reg 8 ! A [7:0] $end
+$var reg 8 " B [7:0] $end
 $var reg 1 # cin $end
-$var wire 1 $ Sum [3] $end
-$var wire 1 % Sum [2] $end
-$var wire 1 & Sum [1] $end
-$var wire 1 ' Sum [0] $end
-$var wire 1 ( test $end
+$var wire 1 $ Sum [7] $end
+$var wire 1 % Sum [6] $end
+$var wire 1 & Sum [5] $end
+$var wire 1 ' Sum [4] $end
+$var wire 1 ( Sum [3] $end
+$var wire 1 ) Sum [2] $end
+$var wire 1 * Sum [1] $end
+$var wire 1 + Sum [0] $end
 
 $scope module i1 $end
-$var wire 1 ) gnd $end
-$var wire 1 * vcc $end
-$var wire 1 + unknown $end
-$var tri1 1 , devclrn $end
-$var tri1 1 - devpor $end
-$var tri1 1 . devoe $end
-$var wire 1 / ~QUARTUS_CREATED_GND~I_combout $end
-$var wire 1 0 ~QUARTUS_CREATED_UNVM~~busy $end
-$var wire 1 1 ~QUARTUS_CREATED_ADC1~~eoc $end
-$var wire 1 2 ~QUARTUS_CREATED_ADC2~~eoc $end
-$var wire 1 3 Sum[0]~output_o $end
-$var wire 1 4 Sum[1]~output_o $end
-$var wire 1 5 Sum[2]~output_o $end
-$var wire 1 6 Sum[3]~output_o $end
-$var wire 1 7 test~output_o $end
-$var wire 1 8 A[0]~input_o $end
-$var wire 1 9 cin~input_o $end
-$var wire 1 : B[0]~input_o $end
-$var wire 1 ; S[0]|sum~combout $end
-$var wire 1 < B[1]~input_o $end
-$var wire 1 = A[1]~input_o $end
-$var wire 1 > WideOr0~0_combout $end
-$var wire 1 ? S[1]|sum~combout $end
-$var wire 1 @ A[2]~input_o $end
-$var wire 1 A B[2]~input_o $end
-$var wire 1 B S[2]|sum~0_combout $end
-$var wire 1 C S[2]|sum~1_combout $end
-$var wire 1 D S[2]|sum~2_combout $end
-$var wire 1 E A[3]~input_o $end
-$var wire 1 F B[3]~input_o $end
+$var wire 1 , gnd $end
+$var wire 1 - vcc $end
+$var wire 1 . unknown $end
+$var tri1 1 / devclrn $end
+$var tri1 1 0 devpor $end
+$var tri1 1 1 devoe $end
+$var wire 1 2 ~QUARTUS_CREATED_GND~I_combout $end
+$var wire 1 3 ~QUARTUS_CREATED_UNVM~~busy $end
+$var wire 1 4 ~QUARTUS_CREATED_ADC1~~eoc $end
+$var wire 1 5 ~QUARTUS_CREATED_ADC2~~eoc $end
+$var wire 1 6 Sum[0]~output_o $end
+$var wire 1 7 Sum[1]~output_o $end
+$var wire 1 8 Sum[2]~output_o $end
+$var wire 1 9 Sum[3]~output_o $end
+$var wire 1 : Sum[4]~output_o $end
+$var wire 1 ; Sum[5]~output_o $end
+$var wire 1 < Sum[6]~output_o $end
+$var wire 1 = Sum[7]~output_o $end
+$var wire 1 > B[0]~input_o $end
+$var wire 1 ? A[0]~input_o $end
+$var wire 1 @ cin~input_o $end
+$var wire 1 A S[0]|sum~combout $end
+$var wire 1 B B[1]~input_o $end
+$var wire 1 C A[1]~input_o $end
+$var wire 1 D p[1]~0_combout $end
+$var wire 1 E S[1]|sum~combout $end
+$var wire 1 F B[2]~input_o $end
 $var wire 1 G S[3]|sum~0_combout $end
-$var wire 1 H S[3]|sum~1_combout $end
+$var wire 1 H A[2]~input_o $end
+$var wire 1 I outer[2].term[0]~0_combout $end
+$var wire 1 J S[2]|sum~combout $end
+$var wire 1 K S[3]|sum~1_combout $end
+$var wire 1 L A[3]~input_o $end
+$var wire 1 M B[3]~input_o $end
+$var wire 1 N S[3]|sum~2_combout $end
+$var wire 1 O A[4]~input_o $end
+$var wire 1 P S[4]|sum~0_combout $end
+$var wire 1 Q B[4]~input_o $end
+$var wire 1 R S[4]|sum~1_combout $end
+$var wire 1 S A[5]~input_o $end
+$var wire 1 T B[5]~input_o $end
+$var wire 1 U S[5]|sum~0_combout $end
+$var wire 1 V S[5]|sum~1_combout $end
+$var wire 1 W A[6]~input_o $end
+$var wire 1 X B[6]~input_o $end
+$var wire 1 Y S[6]|sum~0_combout $end
+$var wire 1 Z S[6]|sum~1_combout $end
+$var wire 1 [ B[7]~input_o $end
+$var wire 1 \ A[7]~input_o $end
+$var wire 1 ] S[7]|sum~0_combout $end
+$var wire 1 ^ S[7]|sum~1_combout $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-b111 !
-b1 "
+b1000001 !
+b11100 "
 0#
-0'
+1+
+0*
+1)
+1(
+1'
 0&
-0%
-1$
-0(
-0)
-1*
-x+
-1,
+1%
+0$
+0,
 1-
-1.
-0/
-z0
-z1
-z2
-03
-04
-05
+x.
+1/
+10
+11
+02
+z3
+z4
+z5
 16
 07
 18
-09
+19
 1:
 0;
-0<
-1=
-1>
-0?
-1@
-0A
-1B
-1C
+1<
+0=
+0>
+1?
+0@
+1A
+0B
+0C
 0D
 0E
-0F
+1F
 0G
-1H
+0H
+0I
+1J
+0K
+0L
+1M
+1N
+0O
+0P
+1Q
+1R
+0S
+0T
+0U
+0V
+1W
+0X
+0Y
+1Z
+0[
+0\
+0]
+0^
 $end
 #1000000
