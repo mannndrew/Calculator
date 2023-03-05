@@ -1,54 +1,3 @@
-/*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off CarryLookAhead -c CarryLookAhead --vector_source="C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/Waveform.vwf" --testbench_file="C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/simulation/qsim/Waveform.vwf.vt"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off CarryLookAhead -c CarryLookAhead --vector_source="C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/Waveform.vwf" --testbench_file="C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/simulation/qsim/Waveform.vwf.vt"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/simulation/qsim/" CarryLookAhead -c CarryLookAhead</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="C:/Users/mannn/Documents/Github/Calculator/CarryLookAhead/simulation/qsim/" CarryLookAhead -c CarryLookAhead</tnetlist_cmd>
-<modelsim_script>onerror {exit -code 1}
-vlib work
-vlog -work work CarryLookAhead.vo
-vlog -work work Waveform.vwf.vt
-vsim -c -t 1ps -L fiftyfivenm_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.CarryLookAhead_vlg_vec_tst
-vcd file -direction CarryLookAhead.msim.vcd
-vcd add -internal CarryLookAhead_vlg_vec_tst/*
-vcd add -internal CarryLookAhead_vlg_vec_tst/i1/*
-proc simTimestamp {} {
-    echo "Simulation time: $::now ps"
-    if { [string equal running [runStatus]] } {
-        after 2500 simTimestamp
-    }
-}
-after 2500 simTimestamp
-run -all
-quit -f
-
-
-
-
-</modelsim_script>
-<modelsim_script_timing>onerror {exit -code 1}
-vlib work
-vlog -work work CarryLookAhead.vo
-vlog -work work Waveform.vwf.vt
-vsim -novopt -c -t 1ps -L fiftyfivenm_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.CarryLookAhead_vlg_vec_tst
-vcd file -direction CarryLookAhead.msim.vcd
-vcd add -internal CarryLookAhead_vlg_vec_tst/*
-vcd add -internal CarryLookAhead_vlg_vec_tst/i1/*
-proc simTimestamp {} {
-    echo "Simulation time: $::now ps"
-    if { [string equal running [runStatus]] } {
-        after 2500 simTimestamp
-    }
-}
-after 2500 simTimestamp
-run -all
-quit -f
-
-
-
-
-</modelsim_script_timing>
-<hdl_lang>verilog</hdl_lang>
-</simulation_settings>*/
 /*
 WARNING: Do NOT edit the input and output ports in this file in a text
 editor if you plan to continue editing the block that represents it in
@@ -369,7 +318,11 @@ TRANSITION_LIST("A[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -378,7 +331,11 @@ TRANSITION_LIST("A[6]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 1000.0;
+		}
 	}
 }
 
@@ -387,7 +344,11 @@ TRANSITION_LIST("A[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -396,7 +357,11 @@ TRANSITION_LIST("A[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -405,7 +370,11 @@ TRANSITION_LIST("A[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -414,7 +383,11 @@ TRANSITION_LIST("A[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -423,7 +396,11 @@ TRANSITION_LIST("A[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -432,7 +409,11 @@ TRANSITION_LIST("A[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 1000.0;
+		}
 	}
 }
 
@@ -441,7 +422,11 @@ TRANSITION_LIST("Sum[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -450,7 +435,11 @@ TRANSITION_LIST("Sum[6]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 1000.0;
+		}
 	}
 }
 
@@ -459,7 +448,11 @@ TRANSITION_LIST("Sum[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -468,7 +461,11 @@ TRANSITION_LIST("Sum[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 1000.0;
+		}
 	}
 }
 
@@ -477,7 +474,11 @@ TRANSITION_LIST("Sum[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 1000.0;
+		}
 	}
 }
 
@@ -486,7 +487,11 @@ TRANSITION_LIST("Sum[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 1000.0;
+		}
 	}
 }
 
@@ -495,7 +500,11 @@ TRANSITION_LIST("Sum[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -504,7 +513,11 @@ TRANSITION_LIST("Sum[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 1000.0;
+		}
 	}
 }
 
@@ -513,7 +526,11 @@ TRANSITION_LIST("B[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -522,7 +539,11 @@ TRANSITION_LIST("B[6]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -531,7 +552,11 @@ TRANSITION_LIST("B[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -540,7 +565,11 @@ TRANSITION_LIST("B[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 1000.0;
+		}
 	}
 }
 
@@ -549,7 +578,11 @@ TRANSITION_LIST("B[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 1000.0;
+		}
 	}
 }
 
@@ -558,7 +591,11 @@ TRANSITION_LIST("B[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 1000.0;
+		}
 	}
 }
 
@@ -567,7 +604,11 @@ TRANSITION_LIST("B[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -576,7 +617,11 @@ TRANSITION_LIST("B[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -585,7 +630,11 @@ TRANSITION_LIST("cin")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -771,21 +820,12 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "cin";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 18;
-	TREE_LEVEL = 0;
-}
-
-DISPLAY_LINE
-{
 	CHANNEL = "Sum";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Signed;
-	TREE_INDEX = 19;
+	TREE_INDEX = 18;
 	TREE_LEVEL = 0;
-	CHILDREN = 20, 21, 22, 23, 24, 25, 26, 27;
+	CHILDREN = 19, 20, 21, 22, 23, 24, 25, 26;
 }
 
 DISPLAY_LINE
@@ -793,9 +833,9 @@ DISPLAY_LINE
 	CHANNEL = "Sum[7]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Signed;
-	TREE_INDEX = 20;
+	TREE_INDEX = 19;
 	TREE_LEVEL = 1;
-	PARENT = 19;
+	PARENT = 18;
 }
 
 DISPLAY_LINE
@@ -803,9 +843,9 @@ DISPLAY_LINE
 	CHANNEL = "Sum[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Signed;
-	TREE_INDEX = 21;
+	TREE_INDEX = 20;
 	TREE_LEVEL = 1;
-	PARENT = 19;
+	PARENT = 18;
 }
 
 DISPLAY_LINE
@@ -813,9 +853,9 @@ DISPLAY_LINE
 	CHANNEL = "Sum[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Signed;
-	TREE_INDEX = 22;
+	TREE_INDEX = 21;
 	TREE_LEVEL = 1;
-	PARENT = 19;
+	PARENT = 18;
 }
 
 DISPLAY_LINE
@@ -823,9 +863,9 @@ DISPLAY_LINE
 	CHANNEL = "Sum[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Signed;
-	TREE_INDEX = 23;
+	TREE_INDEX = 22;
 	TREE_LEVEL = 1;
-	PARENT = 19;
+	PARENT = 18;
 }
 
 DISPLAY_LINE
@@ -833,9 +873,9 @@ DISPLAY_LINE
 	CHANNEL = "Sum[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Signed;
-	TREE_INDEX = 24;
+	TREE_INDEX = 23;
 	TREE_LEVEL = 1;
-	PARENT = 19;
+	PARENT = 18;
 }
 
 DISPLAY_LINE
@@ -843,9 +883,9 @@ DISPLAY_LINE
 	CHANNEL = "Sum[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Signed;
-	TREE_INDEX = 25;
+	TREE_INDEX = 24;
 	TREE_LEVEL = 1;
-	PARENT = 19;
+	PARENT = 18;
 }
 
 DISPLAY_LINE
@@ -853,9 +893,9 @@ DISPLAY_LINE
 	CHANNEL = "Sum[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Signed;
-	TREE_INDEX = 26;
+	TREE_INDEX = 25;
 	TREE_LEVEL = 1;
-	PARENT = 19;
+	PARENT = 18;
 }
 
 DISPLAY_LINE
@@ -863,9 +903,18 @@ DISPLAY_LINE
 	CHANNEL = "Sum[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Signed;
-	TREE_INDEX = 27;
+	TREE_INDEX = 26;
 	TREE_LEVEL = 1;
-	PARENT = 19;
+	PARENT = 18;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "cin";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 27;
+	TREE_LEVEL = 0;
 }
 
 TIME_BAR

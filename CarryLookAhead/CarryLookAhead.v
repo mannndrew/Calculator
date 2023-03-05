@@ -36,25 +36,20 @@ for (i = 1; i < N; i = i + 1) begin : outer
 
 wire [i:0] term;
 
-
 	for (j = 0; j < i+1; j = j + 1) begin : inner			// First Term
-		if (j == 0) begin
+		if (j == 0)
 			assign term[j] = g[i-1];
-		end
 		
-		else if (j == i) begin
-			assign term[j] = &p[i-1:0] & cin;		// Last Term
-		end
+		else if (j == i)
+			assign term[j] = &p[i-1:0] & cin;					// Last Term
 		
-		else begin
+		else
 			assign term[j] = &p[i-1:i-j] & g[i-j-1];			// Middle Terms
-		end
-		
+
 	end
 	
 	assign c[i] = |term[i:0];										// Adds terms together
 	
-
 end
 
 endgenerate
