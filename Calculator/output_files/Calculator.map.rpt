@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Calculator
-Sun Feb 19 23:47:22 2023
+Sat Mar 11 15:25:36 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,26 +13,26 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Inverted Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: InputUnit:L3|keypad_base:L0|clock_div:L0
- 13. Parameter Settings for User Entity Instance: InputUnit:L3|shift_reg:L1
- 14. Parameter Settings for User Entity Instance: InputUnit:L3|shift_reg:LL1
- 15. Parameter Settings for User Entity Instance: ArithmeticUnit:L5
- 16. Parameter Settings for User Entity Instance: ArithmeticUnit:L5|RegisterN:registerA
- 17. Parameter Settings for User Entity Instance: ArithmeticUnit:L5|RegisterN:registerB
- 18. Parameter Settings for User Entity Instance: ArithmeticUnit:L5|AdderSub:AdderSub0
- 19. Parameter Settings for User Entity Instance: ArithmeticUnit:L5|RegisterN:registerR
- 20. Parameter Settings for Inferred Entity Instance: InputUnit:L3|BCD2BinarySM:L2|lpm_mult:Mult0
- 21. lpm_mult Parameter Settings by Entity Instance
- 22. Port Connectivity Checks: "OutputUnit:L6|BinaryToBCD:L1|add3:m6"
- 23. Port Connectivity Checks: "OutputUnit:L6|BinaryToBCD:L1|add3:m1"
- 24. Port Connectivity Checks: "InputUnit:L3|shift_reg:LL1"
- 25. Port Connectivity Checks: "InputUnit:L3|shift_reg:L1"
- 26. Port Connectivity Checks: "InputUnit:L3|keypad_base:L0|clock_div:L0"
- 27. Port Connectivity Checks: "InputUnit:L3|keypad_base:L0"
+  8. State Machine - |Calculator|InputUnit:L3|keypad_base:L0|keypad_fsm:L1|state
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: InputUnit:L3|keypad_base:L0|clock_div:L0
+ 14. Parameter Settings for User Entity Instance: InputUnit:L3|shift_reg:L1
+ 15. Parameter Settings for User Entity Instance: InputUnit:L3|shift_reg:LL1
+ 16. Parameter Settings for User Entity Instance: ArithmeticUnit:L5
+ 17. Parameter Settings for User Entity Instance: ArithmeticUnit:L5|RegisterN:registerA
+ 18. Parameter Settings for User Entity Instance: ArithmeticUnit:L5|RegisterN:registerB
+ 19. Parameter Settings for User Entity Instance: ArithmeticUnit:L5|AdderSub:AdderSub0
+ 20. Parameter Settings for User Entity Instance: ArithmeticUnit:L5|RegisterN:registerR
+ 21. Parameter Settings for Inferred Entity Instance: InputUnit:L3|BCD2BinarySM:L2|lpm_mult:Mult0
+ 22. lpm_mult Parameter Settings by Entity Instance
+ 23. Port Connectivity Checks: "OutputUnit:L6|BinaryToBCD:L1|add3:m6"
+ 24. Port Connectivity Checks: "OutputUnit:L6|BinaryToBCD:L1|add3:m1"
+ 25. Port Connectivity Checks: "InputUnit:L3|shift_reg:LL1"
+ 26. Port Connectivity Checks: "InputUnit:L3|shift_reg:L1"
+ 27. Port Connectivity Checks: "InputUnit:L3|keypad_base:L0|clock_div:L0"
  28. Port Connectivity Checks: "InputUnit:L3"
  29. Port Connectivity Checks: "ControlUnit:L0|Controller:L1"
  30. Post-Synthesis Netlist Statistics for Top Partition
@@ -64,16 +64,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Feb 19 23:47:22 2023       ;
+; Analysis & Synthesis Status        ; Successful - Sat Mar 11 15:25:36 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Calculator                                  ;
 ; Top-level Entity Name              ; Calculator                                  ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 366                                         ;
-;     Total combinational functions  ; 328                                         ;
-;     Dedicated logic registers      ; 106                                         ;
-; Total registers                    ; 106                                         ;
-; Total pins                         ; 50                                          ;
+; Total logic elements               ; 374                                         ;
+;     Total combinational functions  ; 332                                         ;
+;     Dedicated logic registers      ; 114                                         ;
+; Total registers                    ; 114                                         ;
+; Total pins                         ; 49                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -187,51 +187,51 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                  ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                              ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
-; Delay.v                          ; yes             ; User Verilog HDL File        ; C:/Users/mannn/Desktop/Term Project/Delay.v                               ;         ;
-; Controller.v                     ; yes             ; User Verilog HDL File        ; C:/Users/mannn/Desktop/Term Project/Controller.v                          ;         ;
-; OutputUnit/Switch.v              ; yes             ; User Verilog HDL File        ; C:/Users/mannn/Desktop/Term Project/OutputUnit/Switch.v                   ;         ;
-; OutputUnit/SignPlace.v           ; yes             ; User Verilog HDL File        ; C:/Users/mannn/Desktop/Term Project/OutputUnit/SignPlace.v                ;         ;
-; OutputUnit/OutputUnit.v          ; yes             ; User Verilog HDL File        ; C:/Users/mannn/Desktop/Term Project/OutputUnit/OutputUnit.v               ;         ;
-; OutputUnit/DecimalDisplay.v      ; yes             ; User Verilog HDL File        ; C:/Users/mannn/Desktop/Term Project/OutputUnit/DecimalDisplay.v           ;         ;
-; OutputUnit/Complement_O.v        ; yes             ; User Verilog HDL File        ; C:/Users/mannn/Desktop/Term Project/OutputUnit/Complement_O.v             ;         ;
-; OutputUnit/BinaryToBCD.v         ; yes             ; User Verilog HDL File        ; C:/Users/mannn/Desktop/Term Project/OutputUnit/BinaryToBCD.v              ;         ;
-; InputUnit/shift_reg.v            ; yes             ; User Verilog HDL File        ; C:/Users/mannn/Desktop/Term Project/InputUnit/shift_reg.v                 ;         ;
-; InputUnit/RegisterN.v            ; yes             ; User Verilog HDL File        ; C:/Users/mannn/Desktop/Term Project/InputUnit/RegisterN.v                 ;         ;
-; InputUnit/keypad_fsm.v           ; yes             ; User Verilog HDL File        ; C:/Users/mannn/Desktop/Term Project/InputUnit/keypad_fsm.v                ;         ;
-; InputUnit/keypad_decoder.v       ; yes             ; User Verilog HDL File        ; C:/Users/mannn/Desktop/Term Project/InputUnit/keypad_decoder.v            ;         ;
-; InputUnit/keypad_base.v          ; yes             ; User Verilog HDL File        ; C:/Users/mannn/Desktop/Term Project/InputUnit/keypad_base.v               ;         ;
-; InputUnit/InputUnit.v            ; yes             ; User Verilog HDL File        ; C:/Users/mannn/Desktop/Term Project/InputUnit/InputUnit.v                 ;         ;
-; InputUnit/Complement_I.v         ; yes             ; User Verilog HDL File        ; C:/Users/mannn/Desktop/Term Project/InputUnit/Complement_I.v              ;         ;
-; InputUnit/clock_div.v            ; yes             ; User Verilog HDL File        ; C:/Users/mannn/Desktop/Term Project/InputUnit/clock_div.v                 ;         ;
-; InputUnit/CheckValue.v           ; yes             ; User Verilog HDL File        ; C:/Users/mannn/Desktop/Term Project/InputUnit/CheckValue.v                ;         ;
-; InputUnit/BCD2BinarySM.v         ; yes             ; User Verilog HDL File        ; C:/Users/mannn/Desktop/Term Project/InputUnit/BCD2BinarySM.v              ;         ;
-; ArithmeticUnit/ArithmeticUnit.v  ; yes             ; User Verilog HDL File        ; C:/Users/mannn/Desktop/Term Project/ArithmeticUnit/ArithmeticUnit.v       ;         ;
-; ArithmeticUnit/AdderSub.v        ; yes             ; User Verilog HDL File        ; C:/Users/mannn/Desktop/Term Project/ArithmeticUnit/AdderSub.v             ;         ;
-; ControlUnit.v                    ; yes             ; User Verilog HDL File        ; C:/Users/mannn/Desktop/Term Project/ControlUnit.v                         ;         ;
-; calculator.v                     ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/mannn/Desktop/Term Project/calculator.v                          ;         ;
-; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf       ;         ;
-; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc     ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_add_sub.inc    ;         ;
-; multcore.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/multcore.inc       ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/bypassff.inc       ;         ;
-; altshift.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altshift.inc       ;         ;
-; multcore.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/multcore.tdf       ;         ;
-; csa_add.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/csa_add.inc        ;         ;
-; mpar_add.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/mpar_add.inc       ;         ;
-; muleabz.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/muleabz.inc        ;         ;
-; mul_lfrg.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/mul_lfrg.inc       ;         ;
-; mul_boothc.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/mul_boothc.inc     ;         ;
-; alt_ded_mult.inc                 ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/alt_ded_mult.inc   ;         ;
-; alt_ded_mult_y.inc               ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/alt_ded_mult_y.inc ;         ;
-; dffpipe.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/dffpipe.inc        ;         ;
-; mpar_add.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/mpar_add.tdf       ;         ;
-; altshift.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altshift.tdf       ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                        ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                          ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------+---------+
+; Calculator.v                     ; yes             ; User Verilog HDL File  ; C:/Users/mannn/Documents/Github/Calculator/Calculator/Calculator.v                    ;         ;
+; Delay.v                          ; yes             ; User Verilog HDL File  ; C:/Users/mannn/Documents/Github/Calculator/Calculator/Delay.v                         ;         ;
+; Controller.v                     ; yes             ; User Verilog HDL File  ; C:/Users/mannn/Documents/Github/Calculator/Calculator/Controller.v                    ;         ;
+; OutputUnit/Switch.v              ; yes             ; User Verilog HDL File  ; C:/Users/mannn/Documents/Github/Calculator/Calculator/OutputUnit/Switch.v             ;         ;
+; OutputUnit/SignPlace.v           ; yes             ; User Verilog HDL File  ; C:/Users/mannn/Documents/Github/Calculator/Calculator/OutputUnit/SignPlace.v          ;         ;
+; OutputUnit/OutputUnit.v          ; yes             ; User Verilog HDL File  ; C:/Users/mannn/Documents/Github/Calculator/Calculator/OutputUnit/OutputUnit.v         ;         ;
+; OutputUnit/DecimalDisplay.v      ; yes             ; User Verilog HDL File  ; C:/Users/mannn/Documents/Github/Calculator/Calculator/OutputUnit/DecimalDisplay.v     ;         ;
+; OutputUnit/Complement_O.v        ; yes             ; User Verilog HDL File  ; C:/Users/mannn/Documents/Github/Calculator/Calculator/OutputUnit/Complement_O.v       ;         ;
+; OutputUnit/BinaryToBCD.v         ; yes             ; User Verilog HDL File  ; C:/Users/mannn/Documents/Github/Calculator/Calculator/OutputUnit/BinaryToBCD.v        ;         ;
+; InputUnit/shift_reg.v            ; yes             ; User Verilog HDL File  ; C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/shift_reg.v           ;         ;
+; InputUnit/RegisterN.v            ; yes             ; User Verilog HDL File  ; C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/RegisterN.v           ;         ;
+; InputUnit/keypad_fsm.v           ; yes             ; User Verilog HDL File  ; C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/keypad_fsm.v          ;         ;
+; InputUnit/keypad_decoder.v       ; yes             ; User Verilog HDL File  ; C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/keypad_decoder.v      ;         ;
+; InputUnit/keypad_base.v          ; yes             ; User Verilog HDL File  ; C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/keypad_base.v         ;         ;
+; InputUnit/InputUnit.v            ; yes             ; User Verilog HDL File  ; C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/InputUnit.v           ;         ;
+; InputUnit/Complement_I.v         ; yes             ; User Verilog HDL File  ; C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/Complement_I.v        ;         ;
+; InputUnit/clock_div.v            ; yes             ; User Verilog HDL File  ; C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/clock_div.v           ;         ;
+; InputUnit/CheckValue.v           ; yes             ; User Verilog HDL File  ; C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/CheckValue.v          ;         ;
+; InputUnit/BCD2BinarySM.v         ; yes             ; User Verilog HDL File  ; C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/BCD2BinarySM.v        ;         ;
+; ArithmeticUnit/ArithmeticUnit.v  ; yes             ; User Verilog HDL File  ; C:/Users/mannn/Documents/Github/Calculator/Calculator/ArithmeticUnit/ArithmeticUnit.v ;         ;
+; ArithmeticUnit/AdderSub.v        ; yes             ; User Verilog HDL File  ; C:/Users/mannn/Documents/Github/Calculator/Calculator/ArithmeticUnit/AdderSub.v       ;         ;
+; ControlUnit.v                    ; yes             ; User Verilog HDL File  ; C:/Users/mannn/Documents/Github/Calculator/Calculator/ControlUnit.v                   ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf                   ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                 ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_add_sub.inc                ;         ;
+; multcore.inc                     ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/multcore.inc                   ;         ;
+; bypassff.inc                     ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/bypassff.inc                   ;         ;
+; altshift.inc                     ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altshift.inc                   ;         ;
+; multcore.tdf                     ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/multcore.tdf                   ;         ;
+; csa_add.inc                      ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/csa_add.inc                    ;         ;
+; mpar_add.inc                     ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/mpar_add.inc                   ;         ;
+; muleabz.inc                      ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/muleabz.inc                    ;         ;
+; mul_lfrg.inc                     ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/mul_lfrg.inc                   ;         ;
+; mul_boothc.inc                   ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/mul_boothc.inc                 ;         ;
+; alt_ded_mult.inc                 ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/alt_ded_mult.inc               ;         ;
+; alt_ded_mult_y.inc               ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/alt_ded_mult_y.inc             ;         ;
+; dffpipe.inc                      ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/dffpipe.inc                    ;         ;
+; mpar_add.tdf                     ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/mpar_add.tdf                   ;         ;
+; altshift.tdf                     ; yes             ; Megafunction           ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altshift.tdf                   ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -239,30 +239,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 366       ;
+; Estimated Total logic elements              ; 374       ;
 ;                                             ;           ;
-; Total combinational functions               ; 328       ;
+; Total combinational functions               ; 332       ;
 ; Logic element usage by number of LUT inputs ;           ;
 ;     -- 4 input functions                    ; 168       ;
-;     -- 3 input functions                    ; 68        ;
-;     -- <=2 input functions                  ; 92        ;
+;     -- 3 input functions                    ; 66        ;
+;     -- <=2 input functions                  ; 98        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 255       ;
+;     -- normal mode                          ; 259       ;
 ;     -- arithmetic mode                      ; 73        ;
 ;                                             ;           ;
-; Total registers                             ; 106       ;
-;     -- Dedicated logic registers            ; 106       ;
+; Total registers                             ; 114       ;
+;     -- Dedicated logic registers            ; 114       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 50        ;
+; I/O pins                                    ; 49        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 39        ;
-; Total fan-out                               ; 1448      ;
-; Average fan-out                             ; 2.71      ;
+; Total fan-out                               ; 1464      ;
+; Average fan-out                             ; 2.69      ;
 +---------------------------------------------+-----------+
 
 
@@ -271,7 +271,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                        ; Entity Name    ; Library Name ;
 +----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------+----------------+--------------+
-; |Calculator                            ; 328 (0)             ; 106 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 50   ; 0            ; 0          ; |Calculator                                                                ; Calculator     ; work         ;
+; |Calculator                            ; 332 (0)             ; 114 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 49   ; 0            ; 0          ; |Calculator                                                                ; Calculator     ; work         ;
 ;    |ArithmeticUnit:L5|                 ; 20 (0)              ; 24 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|ArithmeticUnit:L5                                              ; ArithmeticUnit ; work         ;
 ;       |AdderSub:AdderSub0|             ; 20 (1)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|ArithmeticUnit:L5|AdderSub:AdderSub0                           ; AdderSub       ; work         ;
 ;          |FullAdder:S[1]|              ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|ArithmeticUnit:L5|AdderSub:AdderSub0|FullAdder:S[1]            ; FullAdder      ; work         ;
@@ -290,15 +290,15 @@ https://fpgasoftware.intel.com/eula.
 ;       |Delay:L0|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|ControlUnit:L0|Delay:L0                                        ; Delay          ; work         ;
 ;       |Delay:L2|                       ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|ControlUnit:L0|Delay:L2                                        ; Delay          ; work         ;
 ;       |Delay:L3|                       ; 2 (2)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|ControlUnit:L0|Delay:L3                                        ; Delay          ; work         ;
-;    |InputUnit:L3|                      ; 200 (0)             ; 74 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|InputUnit:L3                                                   ; InputUnit      ; work         ;
+;    |InputUnit:L3|                      ; 204 (0)             ; 82 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|InputUnit:L3                                                   ; InputUnit      ; work         ;
 ;       |BCD2BinarySM:L2|                ; 76 (72)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|InputUnit:L3|BCD2BinarySM:L2                                   ; BCD2BinarySM   ; work         ;
 ;          |lpm_mult:Mult0|              ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|InputUnit:L3|BCD2BinarySM:L2|lpm_mult:Mult0                    ; lpm_mult       ; work         ;
 ;             |multcore:mult_core|       ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|InputUnit:L3|BCD2BinarySM:L2|lpm_mult:Mult0|multcore:mult_core ; multcore       ; work         ;
 ;       |Complement_I:L4|                ; 18 (18)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|InputUnit:L3|Complement_I:L4                                   ; Complement_I   ; work         ;
-;       |keypad_base:L0|                 ; 100 (2)             ; 41 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|InputUnit:L3|keypad_base:L0                                    ; keypad_base    ; work         ;
-;          |clock_div:L0|                ; 50 (50)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|InputUnit:L3|keypad_base:L0|clock_div:L0                       ; clock_div      ; work         ;
-;          |keypad_decoder:L2|           ; 34 (34)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|InputUnit:L3|keypad_base:L0|keypad_decoder:L2                  ; keypad_decoder ; work         ;
-;          |keypad_fsm:L1|               ; 14 (14)             ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|InputUnit:L3|keypad_base:L0|keypad_fsm:L1                      ; keypad_fsm     ; work         ;
+;       |keypad_base:L0|                 ; 104 (1)             ; 49 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|InputUnit:L3|keypad_base:L0                                    ; keypad_base    ; work         ;
+;          |clock_div:L0|                ; 49 (49)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|InputUnit:L3|keypad_base:L0|clock_div:L0                       ; clock_div      ; work         ;
+;          |keypad_decoder:L2|           ; 35 (35)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|InputUnit:L3|keypad_base:L0|keypad_decoder:L2                  ; keypad_decoder ; work         ;
+;          |keypad_fsm:L1|               ; 19 (19)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|InputUnit:L3|keypad_base:L0|keypad_fsm:L1                      ; keypad_fsm     ; work         ;
 ;       |shift_reg:L1|                   ; 0 (0)               ; 17 (17)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|InputUnit:L3|shift_reg:L1                                      ; shift_reg      ; work         ;
 ;       |shift_reg:LL1|                  ; 6 (6)               ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|InputUnit:L3|shift_reg:LL1                                     ; shift_reg      ; work         ;
 ;    |OutputUnit:L6|                     ; 101 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|OutputUnit:L6                                                  ; OutputUnit     ; work         ;
@@ -320,14 +320,39 @@ https://fpgasoftware.intel.com/eula.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                  ;
-+---------------------------------------+---------------------------------------------+
-; Register name                         ; Reason for Removal                          ;
-+---------------------------------------+---------------------------------------------+
-; InputUnit:L3|shift_reg:LL1|first      ; Merged with InputUnit:L3|shift_reg:L1|first ;
-; Total Number of Removed Registers = 1 ;                                             ;
-+---------------------------------------+---------------------------------------------+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Calculator|InputUnit:L3|keypad_base:L0|keypad_fsm:L1|state                                                                                            ;
++------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+
+; Name       ; state.1011 ; state.1010 ; state.1001 ; state.1000 ; state.0111 ; state.0110 ; state.0101 ; state.0100 ; state.0011 ; state.0010 ; state.0001 ; state.0000 ;
++------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+
+; state.0000 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ;
+; state.0001 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 1          ;
+; state.0010 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 1          ;
+; state.0011 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 1          ;
+; state.0100 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 1          ;
+; state.0101 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 1          ;
+; state.0110 ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ;
+; state.0111 ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ;
+; state.1000 ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ;
+; state.1001 ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ;
+; state.1010 ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ;
+; state.1011 ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ;
++------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                               ;
++----------------------------------------------------+---------------------------------------------+
+; Register name                                      ; Reason for Removal                          ;
++----------------------------------------------------+---------------------------------------------+
+; InputUnit:L3|shift_reg:LL1|first                   ; Merged with InputUnit:L3|shift_reg:L1|first ;
+; InputUnit:L3|keypad_base:L0|keypad_fsm:L1|state~13 ; Lost fanout                                 ;
+; InputUnit:L3|keypad_base:L0|keypad_fsm:L1|state~14 ; Lost fanout                                 ;
+; InputUnit:L3|keypad_base:L0|keypad_fsm:L1|state~15 ; Lost fanout                                 ;
+; InputUnit:L3|keypad_base:L0|keypad_fsm:L1|state~16 ; Lost fanout                                 ;
+; Total Number of Removed Registers = 5              ;                                             ;
++----------------------------------------------------+---------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -335,12 +360,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 106   ;
+; Total registers                              ; 114   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 59    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 37    ;
+; Number of registers using Clock Enable       ; 33    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -371,50 +396,49 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
-; 16:1               ; 4 bits    ; 40 LEs        ; 12 LEs               ; 28 LEs                 ; Yes        ; |Calculator|InputUnit:L3|keypad_base:L0|keypad_fsm:L1|col[0] ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Calculator|OutputUnit:L6|Switch:L3|BCD[5]                   ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Calculator|InputUnit:L3|BCD2BinarySM:L2|binarySM[6]         ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |Calculator|InputUnit:L3|BCD2BinarySM:L2|binarySM[2]         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Calculator|OutputUnit:L6|Switch:L3|BCD[5]           ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Calculator|InputUnit:L3|BCD2BinarySM:L2|binarySM[6] ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |Calculator|InputUnit:L3|BCD2BinarySM:L2|binarySM[3] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: InputUnit:L3|keypad_base:L0|clock_div:L0 ;
-+----------------+--------+-------------------------------------------------------------+
-; Parameter Name ; Value  ; Type                                                        ;
-+----------------+--------+-------------------------------------------------------------+
-; WIDTH          ; 32     ; Signed Integer                                              ;
-; DIV            ; 100000 ; Signed Integer                                              ;
-+----------------+--------+-------------------------------------------------------------+
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                               ;
+; DIV            ; 10000 ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: InputUnit:L3|shift_reg:L1 ;
-+----------------+-------+-----------------------------------------------+
-; Parameter Name ; Value ; Type                                          ;
-+----------------+-------+-----------------------------------------------+
-; COUNT          ; 4     ; Signed Integer                                ;
-; WIDTH          ; 4     ; Signed Integer                                ;
-; START          ; 0     ; Signed Integer                                ;
-+----------------+-------+-----------------------------------------------+
++----------------+------------------+------------------------------------+
+; Parameter Name ; Value            ; Type                               ;
++----------------+------------------+------------------------------------+
+; COUNT          ; 4                ; Signed Integer                     ;
+; WIDTH          ; 4                ; Signed Integer                     ;
+; START          ; 0000000000000000 ; Unsigned Binary                    ;
++----------------+------------------+------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: InputUnit:L3|shift_reg:LL1 ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; COUNT          ; 4     ; Signed Integer                                 ;
-; WIDTH          ; 4     ; Signed Integer                                 ;
-; START          ; 65535 ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
++----------------+------------------+-------------------------------------+
+; Parameter Name ; Value            ; Type                                ;
++----------------+------------------+-------------------------------------+
+; COUNT          ; 4                ; Signed Integer                      ;
+; WIDTH          ; 4                ; Signed Integer                      ;
+; START          ; 1111111111111111 ; Unsigned Binary                     ;
++----------------+------------------+-------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -568,27 +592,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "InputUnit:L3|keypad_base:L0"                                                                                    ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                  ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; slow_clock  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-; sense       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-; valid_digit ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-; inv_row     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "InputUnit:L3"                                                                                                                                 ;
-+-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                                                                                      ;
-+-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; led   ; Output ; Warning  ; Output or bidir port (9 bits) is wider than the port expression (8 bits) it drives; bit(s) "led[8..8]" have no fanouts                       ;
-; load  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-; state ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-+-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "InputUnit:L3"                                                                                                                                ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                      ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; led  ; Output ; Warning  ; Output or bidir port (9 bits) is wider than the port expression (8 bits) it drives; bit(s) "led[8..8]" have no fanouts                       ;
+; load ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -605,24 +616,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 50                          ;
-; cycloneiii_ff         ; 106                         ;
+; boundary_port         ; 49                          ;
+; cycloneiii_ff         ; 114                         ;
 ;     CLR               ; 26                          ;
-;     ENA               ; 4                           ;
 ;     ENA CLR           ; 33                          ;
-;     plain             ; 43                          ;
-; cycloneiii_lcell_comb ; 332                         ;
+;     plain             ; 55                          ;
+; cycloneiii_lcell_comb ; 336                         ;
 ;     arith             ; 73                          ;
 ;         2 data inputs ; 47                          ;
 ;         3 data inputs ; 26                          ;
-;     normal            ; 259                         ;
+;     normal            ; 263                         ;
 ;         1 data inputs ; 13                          ;
-;         2 data inputs ; 36                          ;
-;         3 data inputs ; 42                          ;
+;         2 data inputs ; 42                          ;
+;         3 data inputs ; 40                          ;
 ;         4 data inputs ; 168                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 13.70                       ;
-; Average LUT depth     ; 7.50                        ;
+; Average LUT depth     ; 7.37                        ;
 +-----------------------+-----------------------------+
 
 
@@ -641,93 +651,89 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Feb 19 23:47:16 2023
+    Info: Processing started: Sat Mar 11 15:25:31 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Calculator -c Calculator
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file calculator.v
+    Info (12023): Found entity 1: Calculator File: C:/Users/mannn/Documents/Github/Calculator/Calculator/Calculator.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file delay.v
-    Info (12023): Found entity 1: Delay File: C:/Users/mannn/Desktop/Term Project/Delay.v Line: 1
+    Info (12023): Found entity 1: Delay File: C:/Users/mannn/Documents/Github/Calculator/Calculator/Delay.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file controller.v
-    Info (12023): Found entity 1: Controller File: C:/Users/mannn/Desktop/Term Project/Controller.v Line: 2
+    Info (12023): Found entity 1: Controller File: C:/Users/mannn/Documents/Github/Calculator/Calculator/Controller.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file outputunit/switch.v
-    Info (12023): Found entity 1: Switch File: C:/Users/mannn/Desktop/Term Project/OutputUnit/Switch.v Line: 1
+    Info (12023): Found entity 1: Switch File: C:/Users/mannn/Documents/Github/Calculator/Calculator/OutputUnit/Switch.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file outputunit/signplace.v
-    Info (12023): Found entity 1: SignPlace File: C:/Users/mannn/Desktop/Term Project/OutputUnit/SignPlace.v Line: 1
+    Info (12023): Found entity 1: SignPlace File: C:/Users/mannn/Documents/Github/Calculator/Calculator/OutputUnit/SignPlace.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file outputunit/outputunit.v
-    Info (12023): Found entity 1: OutputUnit File: C:/Users/mannn/Desktop/Term Project/OutputUnit/OutputUnit.v Line: 1
+    Info (12023): Found entity 1: OutputUnit File: C:/Users/mannn/Documents/Github/Calculator/Calculator/OutputUnit/OutputUnit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file outputunit/decimaldisplay.v
-    Info (12023): Found entity 1: DecimalDisplay File: C:/Users/mannn/Desktop/Term Project/OutputUnit/DecimalDisplay.v Line: 2
+    Info (12023): Found entity 1: DecimalDisplay File: C:/Users/mannn/Documents/Github/Calculator/Calculator/OutputUnit/DecimalDisplay.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file outputunit/complement_o.v
-    Info (12023): Found entity 1: Complement_O File: C:/Users/mannn/Desktop/Term Project/OutputUnit/Complement_O.v Line: 1
+    Info (12023): Found entity 1: Complement_O File: C:/Users/mannn/Documents/Github/Calculator/Calculator/OutputUnit/Complement_O.v Line: 1
 Info (12021): Found 2 design units, including 2 entities, in source file outputunit/binarytobcd.v
-    Info (12023): Found entity 1: add3 File: C:/Users/mannn/Desktop/Term Project/OutputUnit/BinaryToBCD.v Line: 1
-    Info (12023): Found entity 2: BinaryToBCD File: C:/Users/mannn/Desktop/Term Project/OutputUnit/BinaryToBCD.v Line: 25
+    Info (12023): Found entity 1: add3 File: C:/Users/mannn/Documents/Github/Calculator/Calculator/OutputUnit/BinaryToBCD.v Line: 1
+    Info (12023): Found entity 2: BinaryToBCD File: C:/Users/mannn/Documents/Github/Calculator/Calculator/OutputUnit/BinaryToBCD.v Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file inputunit/shift_reg.v
-    Info (12023): Found entity 1: shift_reg File: C:/Users/mannn/Desktop/Term Project/InputUnit/shift_reg.v Line: 1
+    Info (12023): Found entity 1: shift_reg File: C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/shift_reg.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file inputunit/registern.v
-    Info (12023): Found entity 1: RegisterN File: C:/Users/mannn/Desktop/Term Project/InputUnit/RegisterN.v Line: 1
+    Info (12023): Found entity 1: RegisterN File: C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/RegisterN.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file inputunit/keypad_fsm.v
-    Info (12023): Found entity 1: keypad_fsm File: C:/Users/mannn/Desktop/Term Project/InputUnit/keypad_fsm.v Line: 1
+    Info (12023): Found entity 1: keypad_fsm File: C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/keypad_fsm.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file inputunit/keypad_decoder.v
-    Info (12023): Found entity 1: keypad_decoder File: C:/Users/mannn/Desktop/Term Project/InputUnit/keypad_decoder.v Line: 1
+    Info (12023): Found entity 1: keypad_decoder File: C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/keypad_decoder.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file inputunit/keypad_base.v
-    Info (12023): Found entity 1: keypad_base File: C:/Users/mannn/Desktop/Term Project/InputUnit/keypad_base.v Line: 1
+    Info (12023): Found entity 1: keypad_base File: C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/keypad_base.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file inputunit/inputunit.v
-    Info (12023): Found entity 1: InputUnit File: C:/Users/mannn/Desktop/Term Project/InputUnit/InputUnit.v Line: 1
+    Info (12023): Found entity 1: InputUnit File: C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/InputUnit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file inputunit/complement_i.v
-    Info (12023): Found entity 1: Complement_I File: C:/Users/mannn/Desktop/Term Project/InputUnit/Complement_I.v Line: 1
+    Info (12023): Found entity 1: Complement_I File: C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/Complement_I.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file inputunit/clock_div.v
-    Info (12023): Found entity 1: clock_div File: C:/Users/mannn/Desktop/Term Project/InputUnit/clock_div.v Line: 1
+    Info (12023): Found entity 1: clock_div File: C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/clock_div.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file inputunit/checkvalue.v
-    Info (12023): Found entity 1: CheckValue File: C:/Users/mannn/Desktop/Term Project/InputUnit/CheckValue.v Line: 1
+    Info (12023): Found entity 1: CheckValue File: C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/CheckValue.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file inputunit/bcd2binarysm.v
-    Info (12023): Found entity 1: BCD2BinarySM File: C:/Users/mannn/Desktop/Term Project/InputUnit/BCD2BinarySM.v Line: 1
-Info (15248): File "C:/Users/mannn/Desktop/Term Project/ArithmeticUnit/RegisterN.v" is a duplicate of already analyzed file "C:/Users/mannn/Desktop/Term Project/InputUnit/RegisterN.v" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+    Info (12023): Found entity 1: BCD2BinarySM File: C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/BCD2BinarySM.v Line: 1
+Info (15248): File "C:/Users/mannn/Documents/Github/Calculator/Calculator/ArithmeticUnit/RegisterN.v" is a duplicate of already analyzed file "C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/RegisterN.v" (same filename, same library name and same md5 digest). Skipping analysis of this file.
 Info (12021): Found 0 design units, including 0 entities, in source file arithmeticunit/registern.v
 Info (12021): Found 1 design units, including 1 entities, in source file arithmeticunit/arithmeticunit.v
-    Info (12023): Found entity 1: ArithmeticUnit File: C:/Users/mannn/Desktop/Term Project/ArithmeticUnit/ArithmeticUnit.v Line: 1
+    Info (12023): Found entity 1: ArithmeticUnit File: C:/Users/mannn/Documents/Github/Calculator/Calculator/ArithmeticUnit/ArithmeticUnit.v Line: 1
 Info (12021): Found 2 design units, including 2 entities, in source file arithmeticunit/addersub.v
-    Info (12023): Found entity 1: FullAdder File: C:/Users/mannn/Desktop/Term Project/ArithmeticUnit/AdderSub.v Line: 2
-    Info (12023): Found entity 2: AdderSub File: C:/Users/mannn/Desktop/Term Project/ArithmeticUnit/AdderSub.v Line: 13
+    Info (12023): Found entity 1: FullAdder File: C:/Users/mannn/Documents/Github/Calculator/Calculator/ArithmeticUnit/AdderSub.v Line: 2
+    Info (12023): Found entity 2: AdderSub File: C:/Users/mannn/Documents/Github/Calculator/Calculator/ArithmeticUnit/AdderSub.v Line: 13
 Info (12021): Found 1 design units, including 1 entities, in source file controlunit.v
-    Info (12023): Found entity 1: ControlUnit File: C:/Users/mannn/Desktop/Term Project/ControlUnit.v Line: 1
-Warning (12125): Using design file calculator.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: Calculator File: C:/Users/mannn/Desktop/Term Project/calculator.v Line: 1
+    Info (12023): Found entity 1: ControlUnit File: C:/Users/mannn/Documents/Github/Calculator/Calculator/ControlUnit.v Line: 1
 Info (12127): Elaborating entity "Calculator" for the top level hierarchy
-Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:L0" File: C:/Users/mannn/Desktop/Term Project/calculator.v Line: 28
-Info (12128): Elaborating entity "Delay" for hierarchy "ControlUnit:L0|Delay:L0" File: C:/Users/mannn/Desktop/Term Project/ControlUnit.v Line: 19
-Info (12128): Elaborating entity "Controller" for hierarchy "ControlUnit:L0|Controller:L1" File: C:/Users/mannn/Desktop/Term Project/ControlUnit.v Line: 26
-Info (12128): Elaborating entity "InputUnit" for hierarchy "InputUnit:L3" File: C:/Users/mannn/Desktop/Term Project/calculator.v Line: 40
-Info (12128): Elaborating entity "keypad_base" for hierarchy "InputUnit:L3|keypad_base:L0" File: C:/Users/mannn/Desktop/Term Project/InputUnit/InputUnit.v Line: 31
-Info (12128): Elaborating entity "clock_div" for hierarchy "InputUnit:L3|keypad_base:L0|clock_div:L0" File: C:/Users/mannn/Desktop/Term Project/InputUnit/keypad_base.v Line: 23
-Info (12128): Elaborating entity "keypad_fsm" for hierarchy "InputUnit:L3|keypad_base:L0|keypad_fsm:L1" File: C:/Users/mannn/Desktop/Term Project/InputUnit/keypad_base.v Line: 33
-Info (12128): Elaborating entity "keypad_decoder" for hierarchy "InputUnit:L3|keypad_base:L0|keypad_decoder:L2" File: C:/Users/mannn/Desktop/Term Project/InputUnit/keypad_base.v Line: 41
-Info (12128): Elaborating entity "shift_reg" for hierarchy "InputUnit:L3|shift_reg:L1" File: C:/Users/mannn/Desktop/Term Project/InputUnit/InputUnit.v Line: 39
-Warning (10230): Verilog HDL assignment warning at shift_reg.v(14): truncated value with size 32 to match size of target (16) File: C:/Users/mannn/Desktop/Term Project/InputUnit/shift_reg.v Line: 14
-Info (12128): Elaborating entity "shift_reg" for hierarchy "InputUnit:L3|shift_reg:LL1" File: C:/Users/mannn/Desktop/Term Project/InputUnit/InputUnit.v Line: 47
-Warning (10230): Verilog HDL assignment warning at shift_reg.v(14): truncated value with size 32 to match size of target (16) File: C:/Users/mannn/Desktop/Term Project/InputUnit/shift_reg.v Line: 14
-Info (12128): Elaborating entity "BCD2BinarySM" for hierarchy "InputUnit:L3|BCD2BinarySM:L2" File: C:/Users/mannn/Desktop/Term Project/InputUnit/InputUnit.v Line: 53
-Info (12128): Elaborating entity "CheckValue" for hierarchy "InputUnit:L3|CheckValue:L3" File: C:/Users/mannn/Desktop/Term Project/InputUnit/InputUnit.v Line: 59
-Info (12128): Elaborating entity "Complement_I" for hierarchy "InputUnit:L3|Complement_I:L4" File: C:/Users/mannn/Desktop/Term Project/InputUnit/InputUnit.v Line: 65
-Warning (10230): Verilog HDL assignment warning at Complement_I.v(13): truncated value with size 32 to match size of target (8) File: C:/Users/mannn/Desktop/Term Project/InputUnit/Complement_I.v Line: 13
-Info (12128): Elaborating entity "ArithmeticUnit" for hierarchy "ArithmeticUnit:L5" File: C:/Users/mannn/Desktop/Term Project/calculator.v Line: 52
-Info (12128): Elaborating entity "RegisterN" for hierarchy "ArithmeticUnit:L5|RegisterN:registerA" File: C:/Users/mannn/Desktop/Term Project/ArithmeticUnit/ArithmeticUnit.v Line: 26
-Info (12128): Elaborating entity "AdderSub" for hierarchy "ArithmeticUnit:L5|AdderSub:AdderSub0" File: C:/Users/mannn/Desktop/Term Project/ArithmeticUnit/ArithmeticUnit.v Line: 43
-Info (12128): Elaborating entity "FullAdder" for hierarchy "ArithmeticUnit:L5|AdderSub:AdderSub0|FullAdder:Sini" File: C:/Users/mannn/Desktop/Term Project/ArithmeticUnit/AdderSub.v Line: 25
-Info (12128): Elaborating entity "OutputUnit" for hierarchy "OutputUnit:L6" File: C:/Users/mannn/Desktop/Term Project/calculator.v Line: 63
-Info (12128): Elaborating entity "Complement_O" for hierarchy "OutputUnit:L6|Complement_O:L0" File: C:/Users/mannn/Desktop/Term Project/OutputUnit/OutputUnit.v Line: 18
-Warning (10230): Verilog HDL assignment warning at Complement_O.v(12): truncated value with size 32 to match size of target (8) File: C:/Users/mannn/Desktop/Term Project/OutputUnit/Complement_O.v Line: 12
-Info (12128): Elaborating entity "BinaryToBCD" for hierarchy "OutputUnit:L6|BinaryToBCD:L1" File: C:/Users/mannn/Desktop/Term Project/OutputUnit/OutputUnit.v Line: 24
-Info (12128): Elaborating entity "add3" for hierarchy "OutputUnit:L6|BinaryToBCD:L1|add3:m1" File: C:/Users/mannn/Desktop/Term Project/OutputUnit/BinaryToBCD.v Line: 49
-Info (12128): Elaborating entity "SignPlace" for hierarchy "OutputUnit:L6|SignPlace:L2" File: C:/Users/mannn/Desktop/Term Project/OutputUnit/OutputUnit.v Line: 31
-Info (12128): Elaborating entity "Switch" for hierarchy "OutputUnit:L6|Switch:L3" File: C:/Users/mannn/Desktop/Term Project/OutputUnit/OutputUnit.v Line: 39
-Info (12128): Elaborating entity "DecimalDisplay" for hierarchy "OutputUnit:L6|DecimalDisplay:onesDisplay" File: C:/Users/mannn/Desktop/Term Project/OutputUnit/OutputUnit.v Line: 46
+Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:L0" File: C:/Users/mannn/Documents/Github/Calculator/Calculator/Calculator.v Line: 28
+Info (12128): Elaborating entity "Delay" for hierarchy "ControlUnit:L0|Delay:L0" File: C:/Users/mannn/Documents/Github/Calculator/Calculator/ControlUnit.v Line: 19
+Info (12128): Elaborating entity "Controller" for hierarchy "ControlUnit:L0|Controller:L1" File: C:/Users/mannn/Documents/Github/Calculator/Calculator/ControlUnit.v Line: 26
+Info (12128): Elaborating entity "InputUnit" for hierarchy "InputUnit:L3" File: C:/Users/mannn/Documents/Github/Calculator/Calculator/Calculator.v Line: 38
+Info (12128): Elaborating entity "keypad_base" for hierarchy "InputUnit:L3|keypad_base:L0" File: C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/InputUnit.v Line: 27
+Info (12128): Elaborating entity "clock_div" for hierarchy "InputUnit:L3|keypad_base:L0|clock_div:L0" File: C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/keypad_base.v Line: 18
+Info (12128): Elaborating entity "keypad_fsm" for hierarchy "InputUnit:L3|keypad_base:L0|keypad_fsm:L1" File: C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/keypad_base.v Line: 26
+Info (12128): Elaborating entity "keypad_decoder" for hierarchy "InputUnit:L3|keypad_base:L0|keypad_decoder:L2" File: C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/keypad_base.v Line: 34
+Info (12128): Elaborating entity "shift_reg" for hierarchy "InputUnit:L3|shift_reg:L1" File: C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/InputUnit.v Line: 35
+Info (12128): Elaborating entity "shift_reg" for hierarchy "InputUnit:L3|shift_reg:LL1" File: C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/InputUnit.v Line: 43
+Info (12128): Elaborating entity "BCD2BinarySM" for hierarchy "InputUnit:L3|BCD2BinarySM:L2" File: C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/InputUnit.v Line: 49
+Info (12128): Elaborating entity "CheckValue" for hierarchy "InputUnit:L3|CheckValue:L3" File: C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/InputUnit.v Line: 55
+Info (12128): Elaborating entity "Complement_I" for hierarchy "InputUnit:L3|Complement_I:L4" File: C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/InputUnit.v Line: 61
+Info (12128): Elaborating entity "ArithmeticUnit" for hierarchy "ArithmeticUnit:L5" File: C:/Users/mannn/Documents/Github/Calculator/Calculator/Calculator.v Line: 50
+Info (12128): Elaborating entity "RegisterN" for hierarchy "ArithmeticUnit:L5|RegisterN:registerA" File: C:/Users/mannn/Documents/Github/Calculator/Calculator/ArithmeticUnit/ArithmeticUnit.v Line: 26
+Info (12128): Elaborating entity "AdderSub" for hierarchy "ArithmeticUnit:L5|AdderSub:AdderSub0" File: C:/Users/mannn/Documents/Github/Calculator/Calculator/ArithmeticUnit/ArithmeticUnit.v Line: 43
+Info (12128): Elaborating entity "FullAdder" for hierarchy "ArithmeticUnit:L5|AdderSub:AdderSub0|FullAdder:Sini" File: C:/Users/mannn/Documents/Github/Calculator/Calculator/ArithmeticUnit/AdderSub.v Line: 25
+Info (12128): Elaborating entity "OutputUnit" for hierarchy "OutputUnit:L6" File: C:/Users/mannn/Documents/Github/Calculator/Calculator/Calculator.v Line: 61
+Info (12128): Elaborating entity "Complement_O" for hierarchy "OutputUnit:L6|Complement_O:L0" File: C:/Users/mannn/Documents/Github/Calculator/Calculator/OutputUnit/OutputUnit.v Line: 18
+Info (12128): Elaborating entity "BinaryToBCD" for hierarchy "OutputUnit:L6|BinaryToBCD:L1" File: C:/Users/mannn/Documents/Github/Calculator/Calculator/OutputUnit/OutputUnit.v Line: 24
+Info (12128): Elaborating entity "add3" for hierarchy "OutputUnit:L6|BinaryToBCD:L1|add3:m1" File: C:/Users/mannn/Documents/Github/Calculator/Calculator/OutputUnit/BinaryToBCD.v Line: 49
+Info (12128): Elaborating entity "SignPlace" for hierarchy "OutputUnit:L6|SignPlace:L2" File: C:/Users/mannn/Documents/Github/Calculator/Calculator/OutputUnit/OutputUnit.v Line: 31
+Info (12128): Elaborating entity "Switch" for hierarchy "OutputUnit:L6|Switch:L3" File: C:/Users/mannn/Documents/Github/Calculator/Calculator/OutputUnit/OutputUnit.v Line: 39
+Info (12128): Elaborating entity "DecimalDisplay" for hierarchy "OutputUnit:L6|DecimalDisplay:onesDisplay" File: C:/Users/mannn/Documents/Github/Calculator/Calculator/OutputUnit/OutputUnit.v Line: 46
 Warning (19016): Clock multiplexers are found and protected
-    Warning (19017): Found clock multiplexer InputUnit:L3|keypad_base:L0|keypad_decoder:L2|WideOr4~0 File: C:/Users/mannn/Desktop/Term Project/InputUnit/keypad_decoder.v Line: 14
+    Warning (19017): Found clock multiplexer InputUnit:L3|keypad_base:L0|keypad_decoder:L2|WideOr4~0 File: C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/keypad_decoder.v Line: 14
 Info (278001): Inferred 1 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "InputUnit:L3|BCD2BinarySM:L2|Mult0" File: C:/Users/mannn/Desktop/Term Project/InputUnit/BCD2BinarySM.v Line: 23
-Info (12130): Elaborated megafunction instantiation "InputUnit:L3|BCD2BinarySM:L2|lpm_mult:Mult0" File: C:/Users/mannn/Desktop/Term Project/InputUnit/BCD2BinarySM.v Line: 23
-Info (12133): Instantiated megafunction "InputUnit:L3|BCD2BinarySM:L2|lpm_mult:Mult0" with the following parameter: File: C:/Users/mannn/Desktop/Term Project/InputUnit/BCD2BinarySM.v Line: 23
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "InputUnit:L3|BCD2BinarySM:L2|Mult0" File: C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/BCD2BinarySM.v Line: 23
+Info (12130): Elaborated megafunction instantiation "InputUnit:L3|BCD2BinarySM:L2|lpm_mult:Mult0" File: C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/BCD2BinarySM.v Line: 23
+Info (12133): Instantiated megafunction "InputUnit:L3|BCD2BinarySM:L2|lpm_mult:Mult0" with the following parameter: File: C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/BCD2BinarySM.v Line: 23
     Info (12134): Parameter "LPM_WIDTHA" = "4"
     Info (12134): Parameter "LPM_WIDTHB" = "7"
     Info (12134): Parameter "LPM_WIDTHP" = "11"
@@ -740,20 +746,21 @@ Info (12133): Instantiated megafunction "InputUnit:L3|BCD2BinarySM:L2|lpm_mult:M
 Info (12131): Elaborated megafunction instantiation "InputUnit:L3|BCD2BinarySM:L2|lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "InputUnit:L3|BCD2BinarySM:L2|lpm_mult:Mult0" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 309
 Info (12131): Elaborated megafunction instantiation "InputUnit:L3|BCD2BinarySM:L2|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "InputUnit:L3|BCD2BinarySM:L2|lpm_mult:Mult0" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/multcore.tdf Line: 229
 Info (12131): Elaborated megafunction instantiation "InputUnit:L3|BCD2BinarySM:L2|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "InputUnit:L3|BCD2BinarySM:L2|lpm_mult:Mult0" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
-Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (13000): Registers with preset signals will power-up high File: C:/Users/mannn/Desktop/Term Project/InputUnit/shift_reg.v Line: 20
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13000): Registers with preset signals will power-up high File: C:/Users/mannn/Documents/Github/Calculator/Calculator/InputUnit/shift_reg.v Line: 20
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 454 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 462 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
-    Info (21059): Implemented 42 output pins
-    Info (21061): Implemented 404 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4838 megabytes
-    Info: Processing ended: Sun Feb 19 23:47:22 2023
+    Info (21059): Implemented 41 output pins
+    Info (21061): Implemented 413 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4840 megabytes
+    Info: Processing ended: Sat Mar 11 15:25:37 2023
     Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Total CPU time (on all processors): 00:00:14
 
 

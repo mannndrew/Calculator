@@ -6,9 +6,7 @@ module InputUnit
 	input [3:0] row,
 	output [3:0] col,
 	output [8:0] led,
-	output [15:0] BCD_I,
-	output trig,
-	output [3:0] state
+	output [15:0] BCD_I
 );
 
 wire valid;
@@ -25,12 +23,10 @@ keypad_base L0
 	.row(row),
 	.col(col),
 	.value(singleBCD),
-	.valid(valid),
-	.trig(trig),
-	.state(state)
+	.valid(valid)
 );
 
-shift_reg L1
+shift_reg #(.START(16'd0)) L1  //For Arithmetic Unit
 (
 	.trig(valid),
 	.in(singleBCD),
@@ -38,7 +34,7 @@ shift_reg L1
 	.reset(reset)
 );
 
-shift_reg #(.START(65535)) LL1 
+shift_reg #(.START(16'd65535)) LL1 //For Output Unit
 (
 	.trig(valid),
 	.in(singleBCD),

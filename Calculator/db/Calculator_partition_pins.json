@@ -168,10 +168,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "LED[9]",
-					"strict" : false
-				},
-				{
 					"name" : "row[0]",
 					"strict" : false
 				},

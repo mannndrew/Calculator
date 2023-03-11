@@ -146,7 +146,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : B7        :        :                   :      
 reset                        : B8        : input  : 2.5 V             :         : 7         : Y              
 GND                          : B9        : gnd    :                   :         :           :                
 LED[3]                       : B10       : output : 2.5 V             :         : 7         : Y              
-LED[9]                       : B11       : output : 2.5 V             :         : 7         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B11       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B12       :        :                   :         : 7         :                
 GND                          : B13       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B14       :        :                   :         : 7         :                

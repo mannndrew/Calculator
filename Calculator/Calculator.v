@@ -7,7 +7,7 @@ module Calculator
 	input [3:0] row,
 	output [3:0] col,
 	output [6:0] HEX3, HEX2, HEX1, HEX0,
-	output [9:0] LED
+	output [8:0] LED
 );
 
 wire [15:0] BCD;
@@ -34,9 +34,7 @@ InputUnit L3
 	.row(row),
 	.col(col),
 	.led(binaryIn),
-	.BCD_I(BCD),
-	.trig(LED[9])
-	//.state(LED[3:0])
+	.BCD_I(BCD)
 );
 
 ArithmeticUnit L5

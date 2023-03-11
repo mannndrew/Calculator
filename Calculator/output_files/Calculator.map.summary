@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sun Feb 19 23:47:22 2023
+Analysis & Synthesis Status : Successful - Sat Mar 11 15:25:36 2023
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : Calculator
 Top-level Entity Name : Calculator
 Family : MAX 10
-Total logic elements : 366
-    Total combinational functions : 328
-    Dedicated logic registers : 106
-Total registers : 106
-Total pins : 50
+Total logic elements : 374
+    Total combinational functions : 332
+    Dedicated logic registers : 114
+Total registers : 114
+Total pins : 49
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

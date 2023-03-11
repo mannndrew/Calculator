@@ -3,14 +3,13 @@ module keypad_fsm
 	input clk,
 	input [3:0] row,
 	output reg [3:0] col,
-	output sense,
-	// Debug
-	output reg [3:0] state,
-	output trig
+	output sense
 );
 
-assign trig = row[0] || row[1] || row[2] || row[3];
-assign sense = state == 10;
+wire trig = row[0] || row[1] || row[2] || row[3];
+assign sense = (state == 10);
+
+reg [3:0] state;
 
 always @ (posedge clk)
 begin

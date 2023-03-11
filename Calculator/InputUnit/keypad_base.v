@@ -4,19 +4,14 @@ module keypad_base
 	input [3:0] row,
 	output [3:0] col,
 	output [3:0] value,
-	output valid,
-	// Debug
-	output slow_clock,
-	output sense,
-	output valid_digit,
-	output [3:0] inv_row,
-	output trig,
-	output [3:0] state
+	output valid
 );
 
-assign inv_row = ~row;
+wire slow_clock;
+wire valid_digit;
+wire sense;
 
-clock_div #(.DIV(100000)) L0
+clock_div #(.DIV(10000)) L0 // 50MHz to 500Hz
 (
 	.clk(clk),
 	.clk_out(slow_clock)
@@ -27,9 +22,7 @@ keypad_fsm L1
 	.clk(slow_clock),
 	.row(row),
 	.col(col),
-	.sense(sense),
-	.trig(trig),
-	.state(state)
+	.sense(sense)
 );
 
 keypad_decoder L2

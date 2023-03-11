@@ -10,6 +10,6 @@ always @(in)
 		out = in;
 		
 	else
-		out = {in[7], ~in[6:0]} + 1;
+		out = {in[7], ~in[6:0]} + 1'b1;
 
 endmodule

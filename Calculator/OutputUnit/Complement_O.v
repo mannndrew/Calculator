@@ -9,6 +9,6 @@ always @(in)
 	if (in[7]==0)
 		out = in;
 	else
-		out = ~in + 1;
+		out = ~in + 1'b1;
 
 endmodule

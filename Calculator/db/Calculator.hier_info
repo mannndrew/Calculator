@@ -48,7 +48,6 @@ LED[5] << InputUnit:L3.col
 LED[6] << InputUnit:L3.col
 LED[7] << InputUnit:L3.col
 LED[8] << ArithmeticUnit:L5.OVR
-LED[9] << InputUnit:L3.trig
 
 
 |Calculator|ControlUnit:L0
@@ -131,11 +130,6 @@ BCD_I[12] <= shift_reg:LL1.out
 BCD_I[13] <= shift_reg:LL1.out
 BCD_I[14] <= shift_reg:LL1.out
 BCD_I[15] <= shift_reg:LL1.out
-trig <= keypad_base:L0.trig
-state[0] <= keypad_base:L0.state
-state[1] <= keypad_base:L0.state
-state[2] <= keypad_base:L0.state
-state[3] <= keypad_base:L0.state
 
 
 |Calculator|InputUnit:L3|keypad_base:L0
@@ -153,18 +147,6 @@ value[1] <= keypad_decoder:L2.value
 value[2] <= keypad_decoder:L2.value
 value[3] <= keypad_decoder:L2.value
 valid <= valid.DB_MAX_OUTPUT_PORT_TYPE
-slow_clock <= slow_clock.DB_MAX_OUTPUT_PORT_TYPE
-sense <= keypad_fsm:L1.sense
-valid_digit <= keypad_decoder:L2.valid
-inv_row[0] <= row[0].DB_MAX_OUTPUT_PORT_TYPE
-inv_row[1] <= row[1].DB_MAX_OUTPUT_PORT_TYPE
-inv_row[2] <= row[2].DB_MAX_OUTPUT_PORT_TYPE
-inv_row[3] <= row[3].DB_MAX_OUTPUT_PORT_TYPE
-trig <= keypad_fsm:L1.trig
-state[0] <= keypad_fsm:L1.state
-state[1] <= keypad_fsm:L1.state
-state[2] <= keypad_fsm:L1.state
-state[3] <= keypad_fsm:L1.state
 
 
 |Calculator|InputUnit:L3|keypad_base:L0|clock_div:L0
@@ -242,24 +224,16 @@ clk => col[0]~reg0.CLK
 clk => col[1]~reg0.CLK
 clk => col[2]~reg0.CLK
 clk => col[3]~reg0.CLK
-clk => state[0]~reg0.CLK
-clk => state[1]~reg0.CLK
-clk => state[2]~reg0.CLK
-clk => state[3]~reg0.CLK
-row[0] => trig.IN0
-row[1] => trig.IN1
-row[2] => trig.IN1
+clk => state~12.DATAIN
+row[0] => comb.IN0
+row[1] => comb.IN1
+row[2] => comb.IN1
 row[3] => trig.IN1
 col[0] <= col[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 col[1] <= col[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 col[2] <= col[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 col[3] <= col[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-sense <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-state[0] <= state[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-state[1] <= state[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-state[2] <= state[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-state[3] <= state[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-trig <= trig.DB_MAX_OUTPUT_PORT_TYPE
+sense <= sense.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Calculator|InputUnit:L3|keypad_base:L0|keypad_decoder:L2
