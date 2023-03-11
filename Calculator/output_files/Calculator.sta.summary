@@ -3,72 +3,72 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'ControlUnit:L0|Controller:L1|state[1]'
-Slack : -13.684
-TNS   : -101.539
+Slack : -13.070
+TNS   : -96.136
 
 Type  : Slow 1200mV 85C Model Setup 'ControlUnit:L0|Controller:L1|state[0]'
-Slack : -13.565
-TNS   : -100.626
+Slack : -12.946
+TNS   : -95.167
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -6.666
-TNS   : -86.984
+Slack : -6.686
+TNS   : -86.018
 
 Type  : Slow 1200mV 85C Model Setup 'row[0]'
-Slack : -5.566
-TNS   : -180.130
-
-Type  : Slow 1200mV 85C Model Setup 'InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track'
-Slack : -2.798
-TNS   : -25.713
+Slack : -5.489
+TNS   : -180.322
 
 Type  : Slow 1200mV 85C Model Setup 'ControlUnit:L0|Delay:L3|btnState[0]'
-Slack : -2.452
-TNS   : -12.571
+Slack : -3.241
+TNS   : -19.592
+
+Type  : Slow 1200mV 85C Model Setup 'InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track'
+Slack : -2.214
+TNS   : -22.607
 
 Type  : Slow 1200mV 85C Model Setup 'ControlUnit:L0|Delay:L0|btnState[0]'
-Slack : -1.583
-TNS   : -3.065
+Slack : -1.892
+TNS   : -3.586
 
-Type  : Slow 1200mV 85C Model Hold 'ControlUnit:L0|Delay:L3|btnState[0]'
-Slack : 0.285
-TNS   : 0.000
+Type  : Slow 1200mV 85C Model Hold 'row[0]'
+Slack : -0.646
+TNS   : -1.075
 
 Type  : Slow 1200mV 85C Model Hold 'InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track'
-Slack : 0.344
+Slack : 0.343
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.442
+Slack : 0.446
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'row[0]'
-Slack : 0.625
+Type  : Slow 1200mV 85C Model Hold 'ControlUnit:L0|Delay:L3|btnState[0]'
+Slack : 1.330
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'ControlUnit:L0|Delay:L0|btnState[0]'
-Slack : 1.224
+Slack : 1.540
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'ControlUnit:L0|Controller:L1|state[0]'
-Slack : 6.796
+Slack : 5.800
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'ControlUnit:L0|Controller:L1|state[1]'
-Slack : 6.919
+Slack : 5.929
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'row[0]'
-Slack : -1.837
-TNS   : -56.158
+Slack : -1.896
+TNS   : -59.890
 
 Type  : Slow 1200mV 85C Model Removal 'row[0]'
-Slack : 0.611
+Slack : 0.482
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'row[0]'
 Slack : -3.000
-TNS   : -103.467
+TNS   : -183.244
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
@@ -95,72 +95,72 @@ Slack : -1.403
 TNS   : -2.806
 
 Type  : Slow 1200mV 0C Model Setup 'ControlUnit:L0|Controller:L1|state[1]'
-Slack : -12.541
-TNS   : -93.049
+Slack : -11.931
+TNS   : -87.849
 
 Type  : Slow 1200mV 0C Model Setup 'ControlUnit:L0|Controller:L1|state[0]'
-Slack : -12.429
-TNS   : -92.184
+Slack : -11.816
+TNS   : -86.957
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -6.011
-TNS   : -75.214
+Slack : -6.054
+TNS   : -74.261
 
 Type  : Slow 1200mV 0C Model Setup 'row[0]'
-Slack : -5.224
-TNS   : -169.014
-
-Type  : Slow 1200mV 0C Model Setup 'InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track'
-Slack : -2.403
-TNS   : -22.278
+Slack : -5.142
+TNS   : -168.943
 
 Type  : Slow 1200mV 0C Model Setup 'ControlUnit:L0|Delay:L3|btnState[0]'
-Slack : -2.173
-TNS   : -11.102
+Slack : -2.967
+TNS   : -17.996
+
+Type  : Slow 1200mV 0C Model Setup 'InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track'
+Slack : -1.878
+TNS   : -19.430
 
 Type  : Slow 1200mV 0C Model Setup 'ControlUnit:L0|Delay:L0|btnState[0]'
-Slack : -1.577
-TNS   : -3.067
+Slack : -1.812
+TNS   : -3.488
 
-Type  : Slow 1200mV 0C Model Hold 'ControlUnit:L0|Delay:L3|btnState[0]'
-Slack : 0.289
-TNS   : 0.000
+Type  : Slow 1200mV 0C Model Hold 'row[0]'
+Slack : -0.567
+TNS   : -1.120
 
 Type  : Slow 1200mV 0C Model Hold 'InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track'
-Slack : 0.309
+Slack : 0.308
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.411
+Slack : 0.415
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'row[0]'
-Slack : 0.557
+Type  : Slow 1200mV 0C Model Hold 'ControlUnit:L0|Delay:L3|btnState[0]'
+Slack : 1.283
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'ControlUnit:L0|Delay:L0|btnState[0]'
-Slack : 1.072
+Slack : 1.373
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'ControlUnit:L0|Controller:L1|state[0]'
-Slack : 6.330
+Slack : 5.345
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'ControlUnit:L0|Controller:L1|state[1]'
-Slack : 6.442
+Slack : 5.465
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'row[0]'
-Slack : -1.662
-TNS   : -50.601
+Slack : -1.687
+TNS   : -53.152
 
 Type  : Slow 1200mV 0C Model Removal 'row[0]'
-Slack : 0.421
+Slack : 0.323
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'row[0]'
 Slack : -3.000
-TNS   : -101.188
+TNS   : -171.658
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
@@ -187,76 +187,76 @@ Slack : -1.403
 TNS   : -2.806
 
 Type  : Fast 1200mV 0C Model Setup 'ControlUnit:L0|Controller:L1|state[1]'
-Slack : -5.757
-TNS   : -42.897
+Slack : -5.409
+TNS   : -39.925
 
 Type  : Fast 1200mV 0C Model Setup 'ControlUnit:L0|Controller:L1|state[0]'
-Slack : -5.724
-TNS   : -42.632
+Slack : -5.342
+TNS   : -39.396
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -2.158
-TNS   : -16.264
+Slack : -2.181
+TNS   : -16.214
 
 Type  : Fast 1200mV 0C Model Setup 'row[0]'
-Slack : -2.101
-TNS   : -67.349
-
-Type  : Fast 1200mV 0C Model Setup 'InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track'
-Slack : -0.892
-TNS   : -8.874
+Slack : -1.916
+TNS   : -62.688
 
 Type  : Fast 1200mV 0C Model Setup 'ControlUnit:L0|Delay:L3|btnState[0]'
-Slack : -0.718
-TNS   : -3.192
+Slack : -1.099
+TNS   : -6.414
+
+Type  : Fast 1200mV 0C Model Setup 'InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track'
+Slack : -0.689
+TNS   : -6.494
 
 Type  : Fast 1200mV 0C Model Setup 'ControlUnit:L0|Delay:L0|btnState[0]'
-Slack : -0.357
-TNS   : -0.481
+Slack : -0.512
+TNS   : -0.763
+
+Type  : Fast 1200mV 0C Model Hold 'row[0]'
+Slack : -0.161
+TNS   : -0.216
 
 Type  : Fast 1200mV 0C Model Hold 'InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track'
-Slack : 0.150
+Slack : 0.149
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.169
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'row[0]'
-Slack : 0.248
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'ControlUnit:L0|Delay:L3|btnState[0]'
-Slack : 0.373
+Slack : 0.173
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'ControlUnit:L0|Delay:L0|btnState[0]'
-Slack : 0.527
+Slack : 0.615
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ControlUnit:L0|Delay:L3|btnState[0]'
+Slack : 0.853
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'ControlUnit:L0|Controller:L1|state[0]'
-Slack : 2.761
+Slack : 2.319
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'ControlUnit:L0|Controller:L1|state[1]'
-Slack : 2.794
+Slack : 2.388
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'row[0]'
-Slack : -0.565
-TNS   : -15.571
+Slack : -0.649
+TNS   : -19.921
 
 Type  : Fast 1200mV 0C Model Removal 'row[0]'
-Slack : 0.588
+Slack : 0.605
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'row[0]'
 Slack : -3.000
-TNS   : -88.142
+TNS   : -100.241
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -43.089
+TNS   : -43.307
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track'
 Slack : -1.000

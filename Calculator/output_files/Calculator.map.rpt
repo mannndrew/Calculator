@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Calculator
-Sat Mar 11 15:25:36 2023
+Sat Mar 11 16:45:45 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -64,13 +64,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Mar 11 15:25:36 2023       ;
+; Analysis & Synthesis Status        ; Successful - Sat Mar 11 16:45:45 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Calculator                                  ;
 ; Top-level Entity Name              ; Calculator                                  ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 374                                         ;
-;     Total combinational functions  ; 332                                         ;
+; Total logic elements               ; 380                                         ;
+;     Total combinational functions  ; 338                                         ;
 ;     Dedicated logic registers      ; 114                                         ;
 ; Total registers                    ; 114                                         ;
 ; Total pins                         ; 49                                          ;
@@ -239,16 +239,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 374       ;
+; Estimated Total logic elements              ; 380       ;
 ;                                             ;           ;
-; Total combinational functions               ; 332       ;
+; Total combinational functions               ; 338       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 168       ;
-;     -- 3 input functions                    ; 66        ;
-;     -- <=2 input functions                  ; 98        ;
+;     -- 4 input functions                    ; 173       ;
+;     -- 3 input functions                    ; 65        ;
+;     -- <=2 input functions                  ; 100       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 259       ;
+;     -- normal mode                          ; 265       ;
 ;     -- arithmetic mode                      ; 73        ;
 ;                                             ;           ;
 ; Total registers                             ; 114       ;
@@ -261,8 +261,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 39        ;
-; Total fan-out                               ; 1464      ;
-; Average fan-out                             ; 2.69      ;
+; Total fan-out                               ; 1485      ;
+; Average fan-out                             ; 2.70      ;
 +---------------------------------------------+-----------+
 
 
@@ -271,7 +271,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                        ; Entity Name    ; Library Name ;
 +----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------+----------------+--------------+
-; |Calculator                            ; 332 (0)             ; 114 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 49   ; 0            ; 0          ; |Calculator                                                                ; Calculator     ; work         ;
+; |Calculator                            ; 338 (0)             ; 114 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 49   ; 0            ; 0          ; |Calculator                                                                ; Calculator     ; work         ;
 ;    |ArithmeticUnit:L5|                 ; 20 (0)              ; 24 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|ArithmeticUnit:L5                                              ; ArithmeticUnit ; work         ;
 ;       |AdderSub:AdderSub0|             ; 20 (1)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|ArithmeticUnit:L5|AdderSub:AdderSub0                           ; AdderSub       ; work         ;
 ;          |FullAdder:S[1]|              ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|ArithmeticUnit:L5|AdderSub:AdderSub0|FullAdder:S[1]            ; FullAdder      ; work         ;
@@ -290,8 +290,8 @@ https://fpgasoftware.intel.com/eula.
 ;       |Delay:L0|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|ControlUnit:L0|Delay:L0                                        ; Delay          ; work         ;
 ;       |Delay:L2|                       ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|ControlUnit:L0|Delay:L2                                        ; Delay          ; work         ;
 ;       |Delay:L3|                       ; 2 (2)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|ControlUnit:L0|Delay:L3                                        ; Delay          ; work         ;
-;    |InputUnit:L3|                      ; 204 (0)             ; 82 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|InputUnit:L3                                                   ; InputUnit      ; work         ;
-;       |BCD2BinarySM:L2|                ; 76 (72)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|InputUnit:L3|BCD2BinarySM:L2                                   ; BCD2BinarySM   ; work         ;
+;    |InputUnit:L3|                      ; 210 (0)             ; 82 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|InputUnit:L3                                                   ; InputUnit      ; work         ;
+;       |BCD2BinarySM:L2|                ; 82 (78)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|InputUnit:L3|BCD2BinarySM:L2                                   ; BCD2BinarySM   ; work         ;
 ;          |lpm_mult:Mult0|              ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|InputUnit:L3|BCD2BinarySM:L2|lpm_mult:Mult0                    ; lpm_mult       ; work         ;
 ;             |multcore:mult_core|       ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|InputUnit:L3|BCD2BinarySM:L2|lpm_mult:Mult0|multcore:mult_core ; multcore       ; work         ;
 ;       |Complement_I:L4|                ; 18 (18)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Calculator|InputUnit:L3|Complement_I:L4                                   ; Complement_I   ; work         ;
@@ -402,8 +402,8 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Calculator|OutputUnit:L6|Switch:L3|BCD[5]           ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Calculator|InputUnit:L3|BCD2BinarySM:L2|binarySM[6] ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |Calculator|InputUnit:L3|BCD2BinarySM:L2|binarySM[3] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Calculator|InputUnit:L3|BCD2BinarySM:L2|binarySM[6] ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 9 LEs                ; 0 LEs                  ; No         ; |Calculator|InputUnit:L3|BCD2BinarySM:L2|binarySM[3] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 
 
@@ -621,18 +621,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     CLR               ; 26                          ;
 ;     ENA CLR           ; 33                          ;
 ;     plain             ; 55                          ;
-; cycloneiii_lcell_comb ; 336                         ;
+; cycloneiii_lcell_comb ; 342                         ;
 ;     arith             ; 73                          ;
 ;         2 data inputs ; 47                          ;
 ;         3 data inputs ; 26                          ;
-;     normal            ; 263                         ;
+;     normal            ; 269                         ;
 ;         1 data inputs ; 13                          ;
-;         2 data inputs ; 42                          ;
-;         3 data inputs ; 40                          ;
-;         4 data inputs ; 168                         ;
+;         2 data inputs ; 44                          ;
+;         3 data inputs ; 39                          ;
+;         4 data inputs ; 173                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 13.70                       ;
-; Average LUT depth     ; 7.37                        ;
+; Average LUT depth     ; 7.63                        ;
 +-----------------------+-----------------------------+
 
 
@@ -651,7 +651,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Mar 11 15:25:31 2023
+    Info: Processing started: Sat Mar 11 16:45:39 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Calculator -c Calculator
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -753,13 +753,13 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 4 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 462 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 468 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
     Info (21059): Implemented 41 output pins
-    Info (21061): Implemented 413 logic cells
+    Info (21061): Implemented 419 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4840 megabytes
-    Info: Processing ended: Sat Mar 11 15:25:37 2023
+    Info: Peak virtual memory: 4838 megabytes
+    Info: Processing ended: Sat Mar 11 16:45:45 2023
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:14
 

@@ -1,5 +1,5 @@
 Timing Analyzer report for Calculator
-Sat Mar 11 15:25:51 2023
+Sat Mar 11 16:45:59 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -94,15 +94,15 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.51        ;
+; Average used               ; 1.50        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   3.8%      ;
-;     Processor 3            ;   3.5%      ;
-;     Processor 4            ;   3.4%      ;
-;     Processors 5-16        ;   3.4%      ;
+;     Processor 2            ;   3.7%      ;
+;     Processor 3            ;   3.3%      ;
+;     Processor 4            ;   3.3%      ;
+;     Processors 5-16        ;   3.3%      ;
 +----------------------------+-------------+
 
 
@@ -126,9 +126,9 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+----------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                         ; Note ;
 +------------+-----------------+----------------------------------------------------+------+
-; 104.43 MHz ; 104.43 MHz      ; row[0]                                             ;      ;
-; 130.45 MHz ; 130.45 MHz      ; clk                                                ;      ;
-; 263.3 MHz  ; 263.3 MHz       ; InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track ;      ;
+; 98.12 MHz  ; 98.12 MHz       ; row[0]                                             ;      ;
+; 130.11 MHz ; 130.11 MHz      ; clk                                                ;      ;
+; 311.14 MHz ; 311.14 MHz      ; InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track ;      ;
 +------------+-----------------+----------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -138,29 +138,29 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------------+---------+---------------+
 ; Clock                                              ; Slack   ; End Point TNS ;
 +----------------------------------------------------+---------+---------------+
-; ControlUnit:L0|Controller:L1|state[1]              ; -13.684 ; -101.539      ;
-; ControlUnit:L0|Controller:L1|state[0]              ; -13.565 ; -100.626      ;
-; clk                                                ; -6.666  ; -86.984       ;
-; row[0]                                             ; -5.566  ; -180.130      ;
-; InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track ; -2.798  ; -25.713       ;
-; ControlUnit:L0|Delay:L3|btnState[0]                ; -2.452  ; -12.571       ;
-; ControlUnit:L0|Delay:L0|btnState[0]                ; -1.583  ; -3.065        ;
+; ControlUnit:L0|Controller:L1|state[1]              ; -13.070 ; -96.136       ;
+; ControlUnit:L0|Controller:L1|state[0]              ; -12.946 ; -95.167       ;
+; clk                                                ; -6.686  ; -86.018       ;
+; row[0]                                             ; -5.489  ; -180.322      ;
+; ControlUnit:L0|Delay:L3|btnState[0]                ; -3.241  ; -19.592       ;
+; InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track ; -2.214  ; -22.607       ;
+; ControlUnit:L0|Delay:L0|btnState[0]                ; -1.892  ; -3.586        ;
 +----------------------------------------------------+---------+---------------+
 
 
-+----------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Hold Summary                                         ;
-+----------------------------------------------------+-------+---------------+
-; Clock                                              ; Slack ; End Point TNS ;
-+----------------------------------------------------+-------+---------------+
-; ControlUnit:L0|Delay:L3|btnState[0]                ; 0.285 ; 0.000         ;
-; InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track ; 0.344 ; 0.000         ;
-; clk                                                ; 0.442 ; 0.000         ;
-; row[0]                                             ; 0.625 ; 0.000         ;
-; ControlUnit:L0|Delay:L0|btnState[0]                ; 1.224 ; 0.000         ;
-; ControlUnit:L0|Controller:L1|state[0]              ; 6.796 ; 0.000         ;
-; ControlUnit:L0|Controller:L1|state[1]              ; 6.919 ; 0.000         ;
-+----------------------------------------------------+-------+---------------+
++-----------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold Summary                                          ;
++----------------------------------------------------+--------+---------------+
+; Clock                                              ; Slack  ; End Point TNS ;
++----------------------------------------------------+--------+---------------+
+; row[0]                                             ; -0.646 ; -1.075        ;
+; InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track ; 0.343  ; 0.000         ;
+; clk                                                ; 0.446  ; 0.000         ;
+; ControlUnit:L0|Delay:L3|btnState[0]                ; 1.330  ; 0.000         ;
+; ControlUnit:L0|Delay:L0|btnState[0]                ; 1.540  ; 0.000         ;
+; ControlUnit:L0|Controller:L1|state[0]              ; 5.800  ; 0.000         ;
+; ControlUnit:L0|Controller:L1|state[1]              ; 5.929  ; 0.000         ;
++----------------------------------------------------+--------+---------------+
 
 
 +----------------------------------------+
@@ -168,7 +168,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+--------+----------------------+
 ; Clock  ; Slack  ; End Point TNS        ;
 +--------+--------+----------------------+
-; row[0] ; -1.837 ; -56.158              ;
+; row[0] ; -1.896 ; -59.890              ;
 +--------+--------+----------------------+
 
 
@@ -177,7 +177,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+-------+----------------------+
 ; Clock  ; Slack ; End Point TNS        ;
 +--------+-------+----------------------+
-; row[0] ; 0.611 ; 0.000                ;
+; row[0] ; 0.482 ; 0.000                ;
 +--------+-------+----------------------+
 
 
@@ -186,7 +186,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------------+--------+---------------+
 ; Clock                                              ; Slack  ; End Point TNS ;
 +----------------------------------------------------+--------+---------------+
-; row[0]                                             ; -3.000 ; -103.467      ;
+; row[0]                                             ; -3.000 ; -183.244      ;
 ; clk                                                ; -3.000 ; -57.717       ;
 ; InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track ; -1.403 ; -22.448       ;
 ; ControlUnit:L0|Controller:L1|state[0]              ; -1.403 ; -11.224       ;
@@ -207,9 +207,9 @@ No synchronizer chains to report.
 +------------+-----------------+----------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                         ; Note ;
 +------------+-----------------+----------------------------------------------------+------+
-; 109.53 MHz ; 109.53 MHz      ; row[0]                                             ;      ;
-; 142.63 MHz ; 142.63 MHz      ; clk                                                ;      ;
-; 293.86 MHz ; 293.86 MHz      ; InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track ;      ;
+; 103.2 MHz  ; 103.2 MHz       ; row[0]                                             ;      ;
+; 141.76 MHz ; 141.76 MHz      ; clk                                                ;      ;
+; 347.46 MHz ; 347.46 MHz      ; InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track ;      ;
 +------------+-----------------+----------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -219,29 +219,29 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------------+---------+---------------+
 ; Clock                                              ; Slack   ; End Point TNS ;
 +----------------------------------------------------+---------+---------------+
-; ControlUnit:L0|Controller:L1|state[1]              ; -12.541 ; -93.049       ;
-; ControlUnit:L0|Controller:L1|state[0]              ; -12.429 ; -92.184       ;
-; clk                                                ; -6.011  ; -75.214       ;
-; row[0]                                             ; -5.224  ; -169.014      ;
-; InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track ; -2.403  ; -22.278       ;
-; ControlUnit:L0|Delay:L3|btnState[0]                ; -2.173  ; -11.102       ;
-; ControlUnit:L0|Delay:L0|btnState[0]                ; -1.577  ; -3.067        ;
+; ControlUnit:L0|Controller:L1|state[1]              ; -11.931 ; -87.849       ;
+; ControlUnit:L0|Controller:L1|state[0]              ; -11.816 ; -86.957       ;
+; clk                                                ; -6.054  ; -74.261       ;
+; row[0]                                             ; -5.142  ; -168.943      ;
+; ControlUnit:L0|Delay:L3|btnState[0]                ; -2.967  ; -17.996       ;
+; InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track ; -1.878  ; -19.430       ;
+; ControlUnit:L0|Delay:L0|btnState[0]                ; -1.812  ; -3.488        ;
 +----------------------------------------------------+---------+---------------+
 
 
-+----------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Hold Summary                                          ;
-+----------------------------------------------------+-------+---------------+
-; Clock                                              ; Slack ; End Point TNS ;
-+----------------------------------------------------+-------+---------------+
-; ControlUnit:L0|Delay:L3|btnState[0]                ; 0.289 ; 0.000         ;
-; InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track ; 0.309 ; 0.000         ;
-; clk                                                ; 0.411 ; 0.000         ;
-; row[0]                                             ; 0.557 ; 0.000         ;
-; ControlUnit:L0|Delay:L0|btnState[0]                ; 1.072 ; 0.000         ;
-; ControlUnit:L0|Controller:L1|state[0]              ; 6.330 ; 0.000         ;
-; ControlUnit:L0|Controller:L1|state[1]              ; 6.442 ; 0.000         ;
-+----------------------------------------------------+-------+---------------+
++-----------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold Summary                                           ;
++----------------------------------------------------+--------+---------------+
+; Clock                                              ; Slack  ; End Point TNS ;
++----------------------------------------------------+--------+---------------+
+; row[0]                                             ; -0.567 ; -1.120        ;
+; InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track ; 0.308  ; 0.000         ;
+; clk                                                ; 0.415  ; 0.000         ;
+; ControlUnit:L0|Delay:L3|btnState[0]                ; 1.283  ; 0.000         ;
+; ControlUnit:L0|Delay:L0|btnState[0]                ; 1.373  ; 0.000         ;
+; ControlUnit:L0|Controller:L1|state[0]              ; 5.345  ; 0.000         ;
+; ControlUnit:L0|Controller:L1|state[1]              ; 5.465  ; 0.000         ;
++----------------------------------------------------+--------+---------------+
 
 
 +---------------------------------------+
@@ -249,7 +249,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+--------+---------------------+
 ; Clock  ; Slack  ; End Point TNS       ;
 +--------+--------+---------------------+
-; row[0] ; -1.662 ; -50.601             ;
+; row[0] ; -1.687 ; -53.152             ;
 +--------+--------+---------------------+
 
 
@@ -258,7 +258,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+-------+---------------------+
 ; Clock  ; Slack ; End Point TNS       ;
 +--------+-------+---------------------+
-; row[0] ; 0.421 ; 0.000               ;
+; row[0] ; 0.323 ; 0.000               ;
 +--------+-------+---------------------+
 
 
@@ -267,7 +267,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------------+--------+---------------+
 ; Clock                                              ; Slack  ; End Point TNS ;
 +----------------------------------------------------+--------+---------------+
-; row[0]                                             ; -3.000 ; -101.188      ;
+; row[0]                                             ; -3.000 ; -171.658      ;
 ; clk                                                ; -3.000 ; -57.717       ;
 ; InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track ; -1.403 ; -22.448       ;
 ; ControlUnit:L0|Controller:L1|state[0]              ; -1.403 ; -11.224       ;
@@ -288,29 +288,29 @@ No synchronizer chains to report.
 +----------------------------------------------------+--------+---------------+
 ; Clock                                              ; Slack  ; End Point TNS ;
 +----------------------------------------------------+--------+---------------+
-; ControlUnit:L0|Controller:L1|state[1]              ; -5.757 ; -42.897       ;
-; ControlUnit:L0|Controller:L1|state[0]              ; -5.724 ; -42.632       ;
-; clk                                                ; -2.158 ; -16.264       ;
-; row[0]                                             ; -2.101 ; -67.349       ;
-; InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track ; -0.892 ; -8.874        ;
-; ControlUnit:L0|Delay:L3|btnState[0]                ; -0.718 ; -3.192        ;
-; ControlUnit:L0|Delay:L0|btnState[0]                ; -0.357 ; -0.481        ;
+; ControlUnit:L0|Controller:L1|state[1]              ; -5.409 ; -39.925       ;
+; ControlUnit:L0|Controller:L1|state[0]              ; -5.342 ; -39.396       ;
+; clk                                                ; -2.181 ; -16.214       ;
+; row[0]                                             ; -1.916 ; -62.688       ;
+; ControlUnit:L0|Delay:L3|btnState[0]                ; -1.099 ; -6.414        ;
+; InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track ; -0.689 ; -6.494        ;
+; ControlUnit:L0|Delay:L0|btnState[0]                ; -0.512 ; -0.763        ;
 +----------------------------------------------------+--------+---------------+
 
 
-+----------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Hold Summary                                          ;
-+----------------------------------------------------+-------+---------------+
-; Clock                                              ; Slack ; End Point TNS ;
-+----------------------------------------------------+-------+---------------+
-; InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track ; 0.150 ; 0.000         ;
-; clk                                                ; 0.169 ; 0.000         ;
-; row[0]                                             ; 0.248 ; 0.000         ;
-; ControlUnit:L0|Delay:L3|btnState[0]                ; 0.373 ; 0.000         ;
-; ControlUnit:L0|Delay:L0|btnState[0]                ; 0.527 ; 0.000         ;
-; ControlUnit:L0|Controller:L1|state[0]              ; 2.761 ; 0.000         ;
-; ControlUnit:L0|Controller:L1|state[1]              ; 2.794 ; 0.000         ;
-+----------------------------------------------------+-------+---------------+
++-----------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold Summary                                           ;
++----------------------------------------------------+--------+---------------+
+; Clock                                              ; Slack  ; End Point TNS ;
++----------------------------------------------------+--------+---------------+
+; row[0]                                             ; -0.161 ; -0.216        ;
+; InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track ; 0.149  ; 0.000         ;
+; clk                                                ; 0.173  ; 0.000         ;
+; ControlUnit:L0|Delay:L0|btnState[0]                ; 0.615  ; 0.000         ;
+; ControlUnit:L0|Delay:L3|btnState[0]                ; 0.853  ; 0.000         ;
+; ControlUnit:L0|Controller:L1|state[0]              ; 2.319  ; 0.000         ;
+; ControlUnit:L0|Controller:L1|state[1]              ; 2.388  ; 0.000         ;
++----------------------------------------------------+--------+---------------+
 
 
 +---------------------------------------+
@@ -318,7 +318,7 @@ No synchronizer chains to report.
 +--------+--------+---------------------+
 ; Clock  ; Slack  ; End Point TNS       ;
 +--------+--------+---------------------+
-; row[0] ; -0.565 ; -15.571             ;
+; row[0] ; -0.649 ; -19.921             ;
 +--------+--------+---------------------+
 
 
@@ -327,7 +327,7 @@ No synchronizer chains to report.
 +--------+-------+---------------------+
 ; Clock  ; Slack ; End Point TNS       ;
 +--------+-------+---------------------+
-; row[0] ; 0.588 ; 0.000               ;
+; row[0] ; 0.605 ; 0.000               ;
 +--------+-------+---------------------+
 
 
@@ -336,8 +336,8 @@ No synchronizer chains to report.
 +----------------------------------------------------+--------+---------------+
 ; Clock                                              ; Slack  ; End Point TNS ;
 +----------------------------------------------------+--------+---------------+
-; row[0]                                             ; -3.000 ; -88.142       ;
-; clk                                                ; -3.000 ; -43.089       ;
+; row[0]                                             ; -3.000 ; -100.241      ;
+; clk                                                ; -3.000 ; -43.307       ;
 ; InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track ; -1.000 ; -16.000       ;
 ; ControlUnit:L0|Controller:L1|state[0]              ; -1.000 ; -8.000        ;
 ; ControlUnit:L0|Controller:L1|state[1]              ; -1.000 ; -8.000        ;
@@ -352,28 +352,28 @@ No synchronizer chains to report.
 No synchronizer chains to report.
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                                               ;
-+-----------------------------------------------------+----------+-------+----------+---------+---------------------+
-; Clock                                               ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+-----------------------------------------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack                                    ; -13.684  ; 0.150 ; -1.837   ; 0.421   ; -3.000              ;
-;  ControlUnit:L0|Controller:L1|state[0]              ; -13.565  ; 2.761 ; N/A      ; N/A     ; -1.403              ;
-;  ControlUnit:L0|Controller:L1|state[1]              ; -13.684  ; 2.794 ; N/A      ; N/A     ; -1.403              ;
-;  ControlUnit:L0|Delay:L0|btnState[0]                ; -1.583   ; 0.527 ; N/A      ; N/A     ; -1.403              ;
-;  ControlUnit:L0|Delay:L3|btnState[0]                ; -2.452   ; 0.285 ; N/A      ; N/A     ; -1.403              ;
-;  InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track ; -2.798   ; 0.150 ; N/A      ; N/A     ; -1.403              ;
-;  clk                                                ; -6.666   ; 0.169 ; N/A      ; N/A     ; -3.000              ;
-;  row[0]                                             ; -5.566   ; 0.248 ; -1.837   ; 0.421   ; -3.000              ;
-; Design-wide TNS                                     ; -510.628 ; 0.0   ; -56.158  ; 0.0     ; -220.11             ;
-;  ControlUnit:L0|Controller:L1|state[0]              ; -100.626 ; 0.000 ; N/A      ; N/A     ; -11.224             ;
-;  ControlUnit:L0|Controller:L1|state[1]              ; -101.539 ; 0.000 ; N/A      ; N/A     ; -11.224             ;
-;  ControlUnit:L0|Delay:L0|btnState[0]                ; -3.067   ; 0.000 ; N/A      ; N/A     ; -2.806              ;
-;  ControlUnit:L0|Delay:L3|btnState[0]                ; -12.571  ; 0.000 ; N/A      ; N/A     ; -11.224             ;
-;  InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track ; -25.713  ; 0.000 ; N/A      ; N/A     ; -22.448             ;
-;  clk                                                ; -86.984  ; 0.000 ; N/A      ; N/A     ; -57.717             ;
-;  row[0]                                             ; -180.130 ; 0.000 ; -56.158  ; 0.000   ; -103.467            ;
-+-----------------------------------------------------+----------+-------+----------+---------+---------------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                                ;
++-----------------------------------------------------+----------+--------+----------+---------+---------------------+
+; Clock                                               ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++-----------------------------------------------------+----------+--------+----------+---------+---------------------+
+; Worst-case Slack                                    ; -13.070  ; -0.646 ; -1.896   ; 0.323   ; -3.000              ;
+;  ControlUnit:L0|Controller:L1|state[0]              ; -12.946  ; 2.319  ; N/A      ; N/A     ; -1.403              ;
+;  ControlUnit:L0|Controller:L1|state[1]              ; -13.070  ; 2.388  ; N/A      ; N/A     ; -1.403              ;
+;  ControlUnit:L0|Delay:L0|btnState[0]                ; -1.892   ; 0.615  ; N/A      ; N/A     ; -1.403              ;
+;  ControlUnit:L0|Delay:L3|btnState[0]                ; -3.241   ; 0.853  ; N/A      ; N/A     ; -1.403              ;
+;  InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track ; -2.214   ; 0.149  ; N/A      ; N/A     ; -1.403              ;
+;  clk                                                ; -6.686   ; 0.173  ; N/A      ; N/A     ; -3.000              ;
+;  row[0]                                             ; -5.489   ; -0.646 ; -1.896   ; 0.323   ; -3.000              ;
+; Design-wide TNS                                     ; -503.428 ; -1.12  ; -59.89   ; 0.0     ; -299.887            ;
+;  ControlUnit:L0|Controller:L1|state[0]              ; -95.167  ; 0.000  ; N/A      ; N/A     ; -11.224             ;
+;  ControlUnit:L0|Controller:L1|state[1]              ; -96.136  ; 0.000  ; N/A      ; N/A     ; -11.224             ;
+;  ControlUnit:L0|Delay:L0|btnState[0]                ; -3.586   ; 0.000  ; N/A      ; N/A     ; -2.806              ;
+;  ControlUnit:L0|Delay:L3|btnState[0]                ; -19.592  ; 0.000  ; N/A      ; N/A     ; -11.224             ;
+;  InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track ; -22.607  ; 0.000  ; N/A      ; N/A     ; -22.448             ;
+;  clk                                                ; -86.018  ; 0.000  ; N/A      ; N/A     ; -57.717             ;
+;  row[0]                                             ; -180.322 ; -1.120 ; -59.890  ; 0.000   ; -183.244            ;
++-----------------------------------------------------+----------+--------+----------+---------+---------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -609,8 +609,8 @@ No synchronizer chains to report.
 ; ControlUnit:L0|Delay:L0|btnState[0]                ; clk                                                ; 2        ; 2        ; 0        ; 0        ;
 ; ControlUnit:L0|Delay:L3|btnState[0]                ; clk                                                ; 1        ; 1        ; 0        ; 0        ;
 ; InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track ; clk                                                ; 1        ; 1        ; 0        ; 0        ;
-; row[0]                                             ; ControlUnit:L0|Controller:L1|state[0]              ; 8552     ; 8552     ; 0        ; 0        ;
-; row[0]                                             ; ControlUnit:L0|Controller:L1|state[1]              ; 8552     ; 8552     ; 0        ; 0        ;
+; row[0]                                             ; ControlUnit:L0|Controller:L1|state[0]              ; 13248    ; 13248    ; 0        ; 0        ;
+; row[0]                                             ; ControlUnit:L0|Controller:L1|state[1]              ; 13248    ; 13248    ; 0        ; 0        ;
 ; ControlUnit:L0|Controller:L1|state[0]              ; ControlUnit:L0|Delay:L0|btnState[0]                ; 0        ; 0        ; 2        ; 2        ;
 ; ControlUnit:L0|Controller:L1|state[1]              ; ControlUnit:L0|Delay:L0|btnState[0]                ; 0        ; 0        ; 2        ; 2        ;
 ; ControlUnit:L0|Controller:L1|state[0]              ; ControlUnit:L0|Delay:L3|btnState[0]                ; 0        ; 0        ; 39       ; 0        ;
@@ -633,8 +633,8 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; ControlUnit:L0|Delay:L0|btnState[0]                ; clk                                                ; 2        ; 2        ; 0        ; 0        ;
 ; ControlUnit:L0|Delay:L3|btnState[0]                ; clk                                                ; 1        ; 1        ; 0        ; 0        ;
 ; InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track ; clk                                                ; 1        ; 1        ; 0        ; 0        ;
-; row[0]                                             ; ControlUnit:L0|Controller:L1|state[0]              ; 8552     ; 8552     ; 0        ; 0        ;
-; row[0]                                             ; ControlUnit:L0|Controller:L1|state[1]              ; 8552     ; 8552     ; 0        ; 0        ;
+; row[0]                                             ; ControlUnit:L0|Controller:L1|state[0]              ; 13248    ; 13248    ; 0        ; 0        ;
+; row[0]                                             ; ControlUnit:L0|Controller:L1|state[1]              ; 13248    ; 13248    ; 0        ; 0        ;
 ; ControlUnit:L0|Controller:L1|state[0]              ; ControlUnit:L0|Delay:L0|btnState[0]                ; 0        ; 0        ; 2        ; 2        ;
 ; ControlUnit:L0|Controller:L1|state[1]              ; ControlUnit:L0|Delay:L0|btnState[0]                ; 0        ; 0        ; 2        ; 2        ;
 ; ControlUnit:L0|Controller:L1|state[0]              ; ControlUnit:L0|Delay:L3|btnState[0]                ; 0        ; 0        ; 39       ; 0        ;
@@ -842,7 +842,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Mar 11 15:25:50 2023
+    Info: Processing started: Sat Mar 11 16:45:58 2023
 Info: Command: quartus_sta Calculator -c Calculator
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -865,38 +865,38 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -13.684
+Info (332146): Worst-case setup slack is -13.070
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -13.684            -101.539 ControlUnit:L0|Controller:L1|state[1] 
-    Info (332119):   -13.565            -100.626 ControlUnit:L0|Controller:L1|state[0] 
-    Info (332119):    -6.666             -86.984 clk 
-    Info (332119):    -5.566            -180.130 row[0] 
-    Info (332119):    -2.798             -25.713 InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track 
-    Info (332119):    -2.452             -12.571 ControlUnit:L0|Delay:L3|btnState[0] 
-    Info (332119):    -1.583              -3.065 ControlUnit:L0|Delay:L0|btnState[0] 
-Info (332146): Worst-case hold slack is 0.285
+    Info (332119):   -13.070             -96.136 ControlUnit:L0|Controller:L1|state[1] 
+    Info (332119):   -12.946             -95.167 ControlUnit:L0|Controller:L1|state[0] 
+    Info (332119):    -6.686             -86.018 clk 
+    Info (332119):    -5.489            -180.322 row[0] 
+    Info (332119):    -3.241             -19.592 ControlUnit:L0|Delay:L3|btnState[0] 
+    Info (332119):    -2.214             -22.607 InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track 
+    Info (332119):    -1.892              -3.586 ControlUnit:L0|Delay:L0|btnState[0] 
+Info (332146): Worst-case hold slack is -0.646
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.285               0.000 ControlUnit:L0|Delay:L3|btnState[0] 
-    Info (332119):     0.344               0.000 InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track 
-    Info (332119):     0.442               0.000 clk 
-    Info (332119):     0.625               0.000 row[0] 
-    Info (332119):     1.224               0.000 ControlUnit:L0|Delay:L0|btnState[0] 
-    Info (332119):     6.796               0.000 ControlUnit:L0|Controller:L1|state[0] 
-    Info (332119):     6.919               0.000 ControlUnit:L0|Controller:L1|state[1] 
-Info (332146): Worst-case recovery slack is -1.837
+    Info (332119):    -0.646              -1.075 row[0] 
+    Info (332119):     0.343               0.000 InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track 
+    Info (332119):     0.446               0.000 clk 
+    Info (332119):     1.330               0.000 ControlUnit:L0|Delay:L3|btnState[0] 
+    Info (332119):     1.540               0.000 ControlUnit:L0|Delay:L0|btnState[0] 
+    Info (332119):     5.800               0.000 ControlUnit:L0|Controller:L1|state[0] 
+    Info (332119):     5.929               0.000 ControlUnit:L0|Controller:L1|state[1] 
+Info (332146): Worst-case recovery slack is -1.896
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.837             -56.158 row[0] 
-Info (332146): Worst-case removal slack is 0.611
+    Info (332119):    -1.896             -59.890 row[0] 
+Info (332146): Worst-case removal slack is 0.482
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.611               0.000 row[0] 
+    Info (332119):     0.482               0.000 row[0] 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -103.467 row[0] 
+    Info (332119):    -3.000            -183.244 row[0] 
     Info (332119):    -3.000             -57.717 clk 
     Info (332119):    -1.403             -22.448 InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track 
     Info (332119):    -1.403             -11.224 ControlUnit:L0|Controller:L1|state[0] 
@@ -908,38 +908,38 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -12.541
+Info (332146): Worst-case setup slack is -11.931
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -12.541             -93.049 ControlUnit:L0|Controller:L1|state[1] 
-    Info (332119):   -12.429             -92.184 ControlUnit:L0|Controller:L1|state[0] 
-    Info (332119):    -6.011             -75.214 clk 
-    Info (332119):    -5.224            -169.014 row[0] 
-    Info (332119):    -2.403             -22.278 InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track 
-    Info (332119):    -2.173             -11.102 ControlUnit:L0|Delay:L3|btnState[0] 
-    Info (332119):    -1.577              -3.067 ControlUnit:L0|Delay:L0|btnState[0] 
-Info (332146): Worst-case hold slack is 0.289
+    Info (332119):   -11.931             -87.849 ControlUnit:L0|Controller:L1|state[1] 
+    Info (332119):   -11.816             -86.957 ControlUnit:L0|Controller:L1|state[0] 
+    Info (332119):    -6.054             -74.261 clk 
+    Info (332119):    -5.142            -168.943 row[0] 
+    Info (332119):    -2.967             -17.996 ControlUnit:L0|Delay:L3|btnState[0] 
+    Info (332119):    -1.878             -19.430 InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track 
+    Info (332119):    -1.812              -3.488 ControlUnit:L0|Delay:L0|btnState[0] 
+Info (332146): Worst-case hold slack is -0.567
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.289               0.000 ControlUnit:L0|Delay:L3|btnState[0] 
-    Info (332119):     0.309               0.000 InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track 
-    Info (332119):     0.411               0.000 clk 
-    Info (332119):     0.557               0.000 row[0] 
-    Info (332119):     1.072               0.000 ControlUnit:L0|Delay:L0|btnState[0] 
-    Info (332119):     6.330               0.000 ControlUnit:L0|Controller:L1|state[0] 
-    Info (332119):     6.442               0.000 ControlUnit:L0|Controller:L1|state[1] 
-Info (332146): Worst-case recovery slack is -1.662
+    Info (332119):    -0.567              -1.120 row[0] 
+    Info (332119):     0.308               0.000 InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track 
+    Info (332119):     0.415               0.000 clk 
+    Info (332119):     1.283               0.000 ControlUnit:L0|Delay:L3|btnState[0] 
+    Info (332119):     1.373               0.000 ControlUnit:L0|Delay:L0|btnState[0] 
+    Info (332119):     5.345               0.000 ControlUnit:L0|Controller:L1|state[0] 
+    Info (332119):     5.465               0.000 ControlUnit:L0|Controller:L1|state[1] 
+Info (332146): Worst-case recovery slack is -1.687
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.662             -50.601 row[0] 
-Info (332146): Worst-case removal slack is 0.421
+    Info (332119):    -1.687             -53.152 row[0] 
+Info (332146): Worst-case removal slack is 0.323
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.421               0.000 row[0] 
+    Info (332119):     0.323               0.000 row[0] 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -101.188 row[0] 
+    Info (332119):    -3.000            -171.658 row[0] 
     Info (332119):    -3.000             -57.717 clk 
     Info (332119):    -1.403             -22.448 InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track 
     Info (332119):    -1.403             -11.224 ControlUnit:L0|Controller:L1|state[0] 
@@ -949,39 +949,39 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -5.757
+Info (332146): Worst-case setup slack is -5.409
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.757             -42.897 ControlUnit:L0|Controller:L1|state[1] 
-    Info (332119):    -5.724             -42.632 ControlUnit:L0|Controller:L1|state[0] 
-    Info (332119):    -2.158             -16.264 clk 
-    Info (332119):    -2.101             -67.349 row[0] 
-    Info (332119):    -0.892              -8.874 InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track 
-    Info (332119):    -0.718              -3.192 ControlUnit:L0|Delay:L3|btnState[0] 
-    Info (332119):    -0.357              -0.481 ControlUnit:L0|Delay:L0|btnState[0] 
-Info (332146): Worst-case hold slack is 0.150
+    Info (332119):    -5.409             -39.925 ControlUnit:L0|Controller:L1|state[1] 
+    Info (332119):    -5.342             -39.396 ControlUnit:L0|Controller:L1|state[0] 
+    Info (332119):    -2.181             -16.214 clk 
+    Info (332119):    -1.916             -62.688 row[0] 
+    Info (332119):    -1.099              -6.414 ControlUnit:L0|Delay:L3|btnState[0] 
+    Info (332119):    -0.689              -6.494 InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track 
+    Info (332119):    -0.512              -0.763 ControlUnit:L0|Delay:L0|btnState[0] 
+Info (332146): Worst-case hold slack is -0.161
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.150               0.000 InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track 
-    Info (332119):     0.169               0.000 clk 
-    Info (332119):     0.248               0.000 row[0] 
-    Info (332119):     0.373               0.000 ControlUnit:L0|Delay:L3|btnState[0] 
-    Info (332119):     0.527               0.000 ControlUnit:L0|Delay:L0|btnState[0] 
-    Info (332119):     2.761               0.000 ControlUnit:L0|Controller:L1|state[0] 
-    Info (332119):     2.794               0.000 ControlUnit:L0|Controller:L1|state[1] 
-Info (332146): Worst-case recovery slack is -0.565
+    Info (332119):    -0.161              -0.216 row[0] 
+    Info (332119):     0.149               0.000 InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track 
+    Info (332119):     0.173               0.000 clk 
+    Info (332119):     0.615               0.000 ControlUnit:L0|Delay:L0|btnState[0] 
+    Info (332119):     0.853               0.000 ControlUnit:L0|Delay:L3|btnState[0] 
+    Info (332119):     2.319               0.000 ControlUnit:L0|Controller:L1|state[0] 
+    Info (332119):     2.388               0.000 ControlUnit:L0|Controller:L1|state[1] 
+Info (332146): Worst-case recovery slack is -0.649
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.565             -15.571 row[0] 
-Info (332146): Worst-case removal slack is 0.588
+    Info (332119):    -0.649             -19.921 row[0] 
+Info (332146): Worst-case removal slack is 0.605
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.588               0.000 row[0] 
+    Info (332119):     0.605               0.000 row[0] 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -88.142 row[0] 
-    Info (332119):    -3.000             -43.089 clk 
+    Info (332119):    -3.000            -100.241 row[0] 
+    Info (332119):    -3.000             -43.307 clk 
     Info (332119):    -1.000             -16.000 InputUnit:L3|keypad_base:L0|clock_div:L0|clk_track 
     Info (332119):    -1.000              -8.000 ControlUnit:L0|Controller:L1|state[0] 
     Info (332119):    -1.000              -8.000 ControlUnit:L0|Controller:L1|state[1] 
@@ -990,8 +990,8 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4971 megabytes
-    Info: Processing ended: Sat Mar 11 15:25:51 2023
+    Info: Peak virtual memory: 4978 megabytes
+    Info: Processing ended: Sat Mar 11 16:45:59 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:02
 
