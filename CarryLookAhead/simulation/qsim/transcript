@@ -1,26 +1,26 @@
 # do CarryLookAhead.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:37:47 on Mar 04,2023
+# Start time: 20:32:55 on Mar 18,2023
 # vlog -work work CarryLookAhead.vo 
 # -- Compiling module CarryLookAhead
 # -- Compiling module hard_block
 # 
 # Top level modules:
 # 	CarryLookAhead
-# End time: 22:37:47 on Mar 04,2023, Elapsed time: 0:00:00
+# End time: 20:32:55 on Mar 18,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:37:47 on Mar 04,2023
+# Start time: 20:32:55 on Mar 18,2023
 # vlog -work work Waveform.vwf.vt 
 # -- Compiling module CarryLookAhead_vlg_vec_tst
 # 
 # Top level modules:
 # 	CarryLookAhead_vlg_vec_tst
-# End time: 22:37:47 on Mar 04,2023, Elapsed time: 0:00:00
+# End time: 20:32:55 on Mar 18,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -t 1ps -L fiftyfivenm_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.CarryLookAhead_vlg_vec_tst 
-# Start time: 22:37:48 on Mar 04,2023
+# Start time: 20:32:55 on Mar 18,2023
 # Loading work.CarryLookAhead_vlg_vec_tst
 # Loading work.CarryLookAhead
 # Loading work.hard_block
@@ -30,13 +30,13 @@
 # Loading fiftyfivenm_ver.fiftyfivenm_unvm
 # Loading fiftyfivenm_ver.fiftyfivenm_adcblock
 # ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\~QUARTUS_CREATED_ADC1~ '.  Expected 8, found 7.
-#    Time: 0 ps  Iteration: 0  Instance: /CarryLookAhead_vlg_vec_tst/i1/\~QUARTUS_CREATED_ADC1~  File: CarryLookAhead.vo Line: 768
-# ** Warning: (vsim-3722) CarryLookAhead.vo(768): [TFMPC] - Missing connection for port 'clk_dft'.
+#    Time: 0 ps  Iteration: 0  Instance: /CarryLookAhead_vlg_vec_tst/i1/\~QUARTUS_CREATED_ADC1~  File: CarryLookAhead.vo Line: 786
+# ** Warning: (vsim-3722) CarryLookAhead.vo(786): [TFMPC] - Missing connection for port 'clk_dft'.
 # ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\~QUARTUS_CREATED_ADC2~ '.  Expected 8, found 7.
-#    Time: 0 ps  Iteration: 0  Instance: /CarryLookAhead_vlg_vec_tst/i1/\~QUARTUS_CREATED_ADC2~  File: CarryLookAhead.vo Line: 791
-# ** Warning: (vsim-3722) CarryLookAhead.vo(791): [TFMPC] - Missing connection for port 'clk_dft'.
+#    Time: 0 ps  Iteration: 0  Instance: /CarryLookAhead_vlg_vec_tst/i1/\~QUARTUS_CREATED_ADC2~  File: CarryLookAhead.vo Line: 809
+# ** Warning: (vsim-3722) CarryLookAhead.vo(809): [TFMPC] - Missing connection for port 'clk_dft'.
 # after#26
 # ** Note: $finish    : Waveform.vwf.vt(49)
 #    Time: 1 us  Iteration: 0  Instance: /CarryLookAhead_vlg_vec_tst
-# End time: 22:37:48 on Mar 04,2023, Elapsed time: 0:00:00
+# End time: 20:32:55 on Mar 18,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 4

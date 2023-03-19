@@ -1,12 +1,12 @@
-Fitter Status : Successful - Sat Mar 04 22:35:27 2023
+Fitter Status : Successful - Sat Mar 18 20:32:33 2023
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : CarryLookAhead
 Top-level Entity Name : CarryLookAhead
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 17 / 49,760 ( < 1 % )
-    Total combinational functions : 17 / 49,760 ( < 1 % )
+Total logic elements : 18 / 49,760 ( < 1 % )
+    Total combinational functions : 18 / 49,760 ( < 1 % )
     Dedicated logic registers : 0 / 49,760 ( 0 % )
 Total registers : 0
 Total pins : 25 / 360 ( 7 % )

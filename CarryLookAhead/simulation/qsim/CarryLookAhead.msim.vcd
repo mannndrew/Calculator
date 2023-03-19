@@ -3,7 +3,7 @@ $comment
 		vcd file CarryLookAhead.msim.vcd -direction
 $end
 $date
-	Sat Mar 04 22:37:48 2023
+	Sat Mar 18 20:32:55 2023
 $end
 $version
 	ModelSim Version 2020.1
@@ -46,49 +46,57 @@ $var wire 1 < Sum[6]~output_o $end
 $var wire 1 = Sum[7]~output_o $end
 $var wire 1 > B[0]~input_o $end
 $var wire 1 ? A[0]~input_o $end
-$var wire 1 @ cin~input_o $end
-$var wire 1 A S[0]|sum~combout $end
-$var wire 1 B B[1]~input_o $end
-$var wire 1 C A[1]~input_o $end
-$var wire 1 D p[1]~0_combout $end
+$var wire 1 @ S[0]|sum~0_combout $end
+$var wire 1 A cin~input_o $end
+$var wire 1 B WideOr0~0_combout $end
+$var wire 1 C B[1]~input_o $end
+$var wire 1 D A[1]~input_o $end
 $var wire 1 E S[1]|sum~combout $end
-$var wire 1 F B[2]~input_o $end
-$var wire 1 G S[3]|sum~0_combout $end
-$var wire 1 H A[2]~input_o $end
-$var wire 1 I outer[2].term[0]~0_combout $end
-$var wire 1 J S[2]|sum~combout $end
-$var wire 1 K S[3]|sum~1_combout $end
+$var wire 1 F S[2]|sum~0_combout $end
+$var wire 1 G A[2]~input_o $end
+$var wire 1 H B[2]~input_o $end
+$var wire 1 I S[2]|sum~1_combout $end
+$var wire 1 J B[3]~input_o $end
+$var wire 1 K S[3]|sum~0_combout $end
 $var wire 1 L A[3]~input_o $end
-$var wire 1 M B[3]~input_o $end
-$var wire 1 N S[3]|sum~2_combout $end
+$var wire 1 M S[3]|sum~1_combout $end
+$var wire 1 N S[4]|sum~0_combout $end
 $var wire 1 O A[4]~input_o $end
-$var wire 1 P S[4]|sum~0_combout $end
-$var wire 1 Q B[4]~input_o $end
-$var wire 1 R S[4]|sum~1_combout $end
+$var wire 1 P B[4]~input_o $end
+$var wire 1 Q S[4]|sum~1_combout $end
+$var wire 1 R S[5]|sum~0_combout $end
 $var wire 1 S A[5]~input_o $end
 $var wire 1 T B[5]~input_o $end
-$var wire 1 U S[5]|sum~0_combout $end
-$var wire 1 V S[5]|sum~1_combout $end
-$var wire 1 W A[6]~input_o $end
-$var wire 1 X B[6]~input_o $end
-$var wire 1 Y S[6]|sum~0_combout $end
+$var wire 1 U S[5]|sum~1_combout $end
+$var wire 1 V S[6]|sum~0_combout $end
+$var wire 1 W B[6]~input_o $end
+$var wire 1 X A[6]~input_o $end
+$var wire 1 Y WideOr6~0_combout $end
 $var wire 1 Z S[6]|sum~1_combout $end
-$var wire 1 [ B[7]~input_o $end
-$var wire 1 \ A[7]~input_o $end
-$var wire 1 ] S[7]|sum~0_combout $end
-$var wire 1 ^ S[7]|sum~1_combout $end
+$var wire 1 [ WideOr6~1_combout $end
+$var wire 1 \ B[7]~input_o $end
+$var wire 1 ] A[7]~input_o $end
+$var wire 1 ^ S[7]|sum~combout $end
+$var wire 1 _ B_or_Bnot [7] $end
+$var wire 1 ` B_or_Bnot [6] $end
+$var wire 1 a B_or_Bnot [5] $end
+$var wire 1 b B_or_Bnot [4] $end
+$var wire 1 c B_or_Bnot [3] $end
+$var wire 1 d B_or_Bnot [2] $end
+$var wire 1 e B_or_Bnot [1] $end
+$var wire 1 f B_or_Bnot [0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
 b1000001 !
-b11100 "
+b10101 "
 0#
-1+
-0*
+0+
+1*
 1)
-1(
+0(
 1'
 0&
 1%
@@ -103,46 +111,54 @@ x.
 z3
 z4
 z5
-16
-07
+06
+17
 18
-19
+09
 1:
 0;
 1<
 0=
-0>
+1>
 1?
 0@
-1A
-0B
+0A
+1B
 0C
 0D
-0E
-1F
+1E
+0F
 0G
-0H
-0I
-1J
+1H
+1I
+0J
 0K
 0L
-1M
-1N
+0M
+0N
 0O
-0P
+1P
 1Q
-1R
+0R
 0S
 0T
 0U
 0V
-1W
-0X
+0W
+1X
 0Y
 1Z
 0[
 0\
 0]
 0^
+zf
+ze
+zd
+zc
+zb
+za
+0`
+z_
 $end
 #1000000

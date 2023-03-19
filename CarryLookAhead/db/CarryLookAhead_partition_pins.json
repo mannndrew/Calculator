@@ -36,10 +36,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "cin",
-					"strict" : false
-				},
-				{
 					"name" : "A[0]",
 					"strict" : false
 				},
@@ -48,7 +44,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "A[1]",
+					"name" : "cin",
 					"strict" : false
 				},
 				{
@@ -56,7 +52,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "A[2]",
+					"name" : "A[1]",
 					"strict" : false
 				},
 				{
@@ -64,7 +60,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "A[3]",
+					"name" : "A[2]",
 					"strict" : false
 				},
 				{
@@ -72,7 +68,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "A[4]",
+					"name" : "A[3]",
 					"strict" : false
 				},
 				{
@@ -80,7 +76,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "A[5]",
+					"name" : "A[4]",
 					"strict" : false
 				},
 				{
@@ -88,11 +84,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "A[6]",
+					"name" : "A[5]",
 					"strict" : false
 				},
 				{
 					"name" : "B[6]",
+					"strict" : false
+				},
+				{
+					"name" : "A[6]",
 					"strict" : false
 				},
 				{
