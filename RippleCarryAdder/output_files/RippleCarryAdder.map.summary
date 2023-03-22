@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Wed Mar 01 23:18:12 2023
+Analysis & Synthesis Status : Successful - Tue Mar 21 02:48:59 2023
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : RippleCarryAdder
 Top-level Entity Name : RippleCarryAdder
 Family : MAX 10
-Total logic elements : 7
-    Total combinational functions : 7
+Total logic elements : 15
+    Total combinational functions : 15
     Dedicated logic registers : 0
 Total registers : 0
-Total pins : 13
+Total pins : 25
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

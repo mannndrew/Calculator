@@ -20,6 +20,22 @@
 					"strict" : false
 				},
 				{
+					"name" : "Sum[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Sum[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Sum[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Sum[7]",
+					"strict" : false
+				},
+				{
 					"name" : "A[0]",
 					"strict" : false
 				},
@@ -53,6 +69,38 @@
 				},
 				{
 					"name" : "B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "A[4]",
+					"strict" : false
+				},
+				{
+					"name" : "B[4]",
+					"strict" : false
+				},
+				{
+					"name" : "A[5]",
+					"strict" : false
+				},
+				{
+					"name" : "B[5]",
+					"strict" : false
+				},
+				{
+					"name" : "A[6]",
+					"strict" : false
+				},
+				{
+					"name" : "B[6]",
+					"strict" : false
+				},
+				{
+					"name" : "A[7]",
+					"strict" : false
+				},
+				{
+					"name" : "B[7]",
 					"strict" : false
 				}
 			]

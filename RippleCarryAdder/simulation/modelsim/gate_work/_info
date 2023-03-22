@@ -1,0 +1,85 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/mannn/Documents/Github/Calculator/RippleCarryAdder/simulation/modelsim
+vhard_block
+Z1 !s110 1679523175
+!i10b 1
+!s100 =<=^i?@EjMdOBl_>`aXHe3
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ig@?XWgL3::OE4`EjVLT[61
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1679384950
+Z5 8RippleCarryAdder.vo
+Z6 FRippleCarryAdder.vo
+!i122 0
+L0 813 45
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1679523175.000000
+Z9 !s107 RippleCarryAdder.vo|
+Z10 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|RippleCarryAdder.vo|
+!i113 1
+Z11 o-vlog01compat -work work
+Z12 !s92 -vlog01compat -work work +incdir+.
+Z13 tCvgOpt 0
+vRippleCarryAdder
+R1
+!i10b 1
+!s100 Dmz`LRWAb]Y]mOeRh;l4Y3
+R2
+I`:j>V<XS@zT22hBzY2FTo0
+R3
+R0
+R4
+R5
+R6
+!i122 0
+L0 32 780
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+R13
+n@ripple@carry@adder
+vtb_RippleCarryAdder
+R1
+!i10b 1
+!s100 Ek7FA;cl6QC?Q26RPj[IO0
+R2
+Id`Cb4Q;HYOE@Oz`;>dOz83
+R3
+R0
+w1679384931
+8C:/Users/mannn/Documents/Github/Calculator/RippleCarryAdder/tb_RippleCarryAdder.v
+FC:/Users/mannn/Documents/Github/Calculator/RippleCarryAdder/tb_RippleCarryAdder.v
+!i122 1
+L0 3 37
+R7
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/mannn/Documents/Github/Calculator/RippleCarryAdder/tb_RippleCarryAdder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/mannn/Documents/Github/Calculator/RippleCarryAdder|C:/Users/mannn/Documents/Github/Calculator/RippleCarryAdder/tb_RippleCarryAdder.v|
+!i113 1
+R11
+!s92 -vlog01compat -work work +incdir+C:/Users/mannn/Documents/Github/Calculator/RippleCarryAdder
+R13
+ntb_@ripple@carry@adder
