@@ -1,0 +1,10 @@
+sudo apt install libelf-dev
+sudo apt-get install binutils-dev
+sudo apt-get install verilator
+
+https://github.com/accellera-official/systemc
+Add to path: /etc/environment
+Change ?= to =
+
+In Home Directory:
+	nano .bashrc
