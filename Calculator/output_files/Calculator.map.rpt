@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Calculator
-Sat Mar 11 16:45:45 2023
+Fri Mar 31 15:46:14 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -64,7 +64,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Mar 11 16:45:45 2023       ;
+; Analysis & Synthesis Status        ; Successful - Fri Mar 31 15:46:14 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Calculator                                  ;
 ; Top-level Entity Name              ; Calculator                                  ;
@@ -174,16 +174,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
-; Maximum used               ; 16          ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
-;     Processors 3-16        ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -641,7 +641,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -651,10 +651,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Mar 11 16:45:39 2023
+    Info: Processing started: Fri Mar 31 15:46:04 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Calculator -c Calculator
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file calculator.v
     Info (12023): Found entity 1: Calculator File: C:/Users/mannn/Documents/Github/Calculator/Calculator/Calculator.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file delay.v
@@ -758,9 +758,9 @@ Info (21057): Implemented 468 device resources after synthesis - the final resou
     Info (21059): Implemented 41 output pins
     Info (21061): Implemented 419 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4838 megabytes
-    Info: Processing ended: Sat Mar 11 16:45:45 2023
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Peak virtual memory: 4828 megabytes
+    Info: Processing ended: Fri Mar 31 15:46:14 2023
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:11
 
 
