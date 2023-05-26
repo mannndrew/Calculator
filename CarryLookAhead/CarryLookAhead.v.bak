@@ -1,7 +1,0 @@
-module CarryLookAhead
-(
-	input [1:0] A,
-	input [1:0] B,
-	input cin,
-	output [1:0] Sum
-);
