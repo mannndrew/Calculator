@@ -4,3 +4,13 @@
 # Executables
 *.exe
 
+*.mat
+*.bak
+*.qws
+
+db/
+output_files/
+incremental_db/
+simulation/
+.qsys_edit/
+*.rpt
