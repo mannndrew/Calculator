@@ -3,11 +3,11 @@ module Calculator
 	input clk,
 	input button,
 	input reset,
-	input addOrSub,
+	input [2:0] op,
 	input [3:0] row,
 	output [3:0] col,
 	output [6:0] HEX3, HEX2, HEX1, HEX0,
-	output [8:0] LED
+	output [7:0] LED
 );
 
 wire [15:0] BCD;
@@ -43,10 +43,9 @@ ArithmeticUnit L5
 	.LoadA(control[3]),
 	.LoadB(control[2]),
 	.LoadR(control[1]),
-	.AddSub(addOrSub),
+	.op(op),
 	.Reset(reset),
-	.Result(binaryOut),
-	.OVR(LED[8])
+	.Result(binaryOut)
 );
 
 OutputUnit L6
