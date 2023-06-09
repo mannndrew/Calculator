@@ -1,9 +1,9 @@
 module Switch
 (
 	input toggle,
-	input [15:0] BCD_I,
-	input [15:0] BCD_A,
-	output reg [15:0] BCD
+	input [23:0] BCD_I,
+	input [23:0] BCD_A,
+	output reg [23:0] BCD
 );
 
 always @(toggle, BCD_I, BCD_A)

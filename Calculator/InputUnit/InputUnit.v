@@ -5,17 +5,15 @@ module InputUnit
 	input reset,
 	input [3:0] row,
 	output [3:0] col,
-	output [8:0] led,
-	output [15:0] BCD_I
+	output [31:0] tcBinary,
+	output [23:0] BCD_I
 );
 
 wire valid;
-wire negative;
 wire [3:0] singleBCD;
-wire [15:0] BCD_A;
-wire validFlag;
-wire [7:0] binary;
-wire [7:0] tcBinary;
+wire [23:0] BCD_A;
+wire [31:0] binary;
+wire neg;
 
 keypad_base L0
 (
@@ -26,7 +24,7 @@ keypad_base L0
 	.valid(valid)
 );
 
-shift_reg #(.START(16'd0)) L1  //For Arithmetic Unit
+shift_reg #(.COUNT(6), .START(24'd0)) L1  //For Arithmetic Unit
 (
 	.trig(valid),
 	.in(singleBCD),
@@ -34,7 +32,7 @@ shift_reg #(.START(16'd0)) L1  //For Arithmetic Unit
 	.reset(reset)
 );
 
-shift_reg #(.START(16'd65535)) LL1 //For Output Unit
+shift_reg #(.COUNT(6), .START(24'hffffff)) LL1 //For Output Unit
 (
 	.trig(valid),
 	.in(singleBCD),
@@ -45,23 +43,15 @@ shift_reg #(.START(16'd65535)) LL1 //For Output Unit
 BCD2BinarySM L2
 (
 	.BCD(BCD_A),
-	.binarySM(binary)
+	.binarySM(binary),
+	.neg(neg)
 );
 
-CheckValue L3
+Complement_I #(.N(32)) L4
 (
-	.BCD(BCD_A),
-	.checkedFlag(validFlag)
+	.In(binary),
+	.Flip(neg),
+	.Out(tcBinary)
 );
-
-Complement_I L4
-(
-	.in(binary),
-	.out(tcBinary)
-);
-
-assign led = {validFlag, tcBinary};
-
-
 
 endmodule

@@ -1,4 +1,4 @@
-module ArithmeticUnit #(parameter N=8)
+module ArithmeticUnit #(parameter N=32)
 (
 	input [N-1:0]in,
 	input LoadA,
