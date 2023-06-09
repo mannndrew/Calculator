@@ -10,9 +10,10 @@ module Calculator
 	output [7:0] LED
 );
 
-wire [23:0] BCD;
+wire [43:0] BCD;
 wire [31:0] binaryIn, binaryOut;
 wire [3:0] control;
+wire [2:0] count;
 wire clearInput;
 
 assign LED[3:0] = row[3:0];
@@ -34,7 +35,8 @@ InputUnit L3
 	.row(row),
 	.col(col),
 	.tcBinary(binaryIn),
-	.BCD_I(BCD)
+	.BCD_I(BCD),
+	.count(count)
 );
 
 ArithmeticUnit L5
@@ -50,8 +52,9 @@ ArithmeticUnit L5
 
 OutputUnit L6
 (
+	.count(count),
 	.toggle(control[0]),
-	.BCD_I(BCD),
+	.BCD_IU(BCD),
 	.SW(binaryOut),
 	.HEX0(HEX0),
 	.HEX1(HEX1),

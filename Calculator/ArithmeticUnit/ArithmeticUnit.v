@@ -20,7 +20,7 @@ wire [N-1:0] Out_Q;
 
 wire AddSub, Left_Right, Logic_Arithmetic;
 
-assign Result = Out_Q;
+assign Result = Out_D;
 
 RegisterN #(N) registerA 
 (

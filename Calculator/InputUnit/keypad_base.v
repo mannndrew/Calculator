@@ -4,14 +4,18 @@ module keypad_base
 	input [3:0] row,
 	output [3:0] col,
 	output [3:0] value,
-	output valid
+	output valid_in,
+	output valid_digit,
+	output valid_LR
 );
 
 wire slow_clock;
-wire valid_digit;
 wire sense;
+wire valid_in_I;
+wire valid_digit_I;
+wire valid_LR_I;
 
-clock_div #(.DIV(10000)) L0 // 50MHz to 500Hz
+clock_div #(.DIV(100000)) L0 // 50MHz to 500Hz
 (
 	.clk(clk),
 	.clk_out(slow_clock)
@@ -30,9 +34,13 @@ keypad_decoder L2
 	.row(row),
 	.col(col),
 	.value(value),
-	.valid(valid_digit)
+	.valid_in(valid_in_I),
+	.valid_dig(valid_digit_I),
+	.valid_LR(valid_LR_I)
 );
 
-assign valid = valid_digit && sense;
+assign valid_in = valid_in_I && sense;
+assign valid_digit = valid_digit_I && sense;
+assign valid_LR = valid_LR_I && sense;
 
 endmodule
