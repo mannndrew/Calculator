@@ -12,6 +12,14 @@ The repository is organized as follows:
 
 ---
 
+## Demonstration
+
+![alt text](Documentation/mul.gif) 
+
+Shown above is an example of multiplication performed on the DE10-Lite. To begin, the first operand is entered followed by the enter button, then the proccess is repeated for the second operand. Lastly, the alu opcode is verified as a switch value and the multiplication result is displayed. 
+
+
+
 ## Features
 
 - [Add](Documentation/add.gif)
