@@ -14,26 +14,13 @@ The repository is organized as follows:
 
 ## Features
 
-### Add
-![alt text](Documentation/add.gif)
-
-### Subtract
-![alt text](Documentation/sub.gif)
-
-### Multiply
-![alt text](Documentation/mul.gif)
-
-### Divide
-![alt text](Documentation/div.gif)
-
-### LSL, ASL
-![alt text](Documentation/left.gif)
-
-### LSR, ASR
-![alt text](Documentation/right.gif)
-
-### Scroll (HEX10 - HEX0)
-![alt text](Documentation/move.gif)
+- [Add](Documentation/add.gif)
+- [Subtract](Documentation/sub.gif)
+- [Multiply](Documentation/mul.gif)
+- [Divide](Documentation/div.gif)
+- [LSL, ASL](Documentation/left.gif)
+- [LSR, ASR](Documentation/right.gif)
+- [Scroll (HEX10 - HEX0)](Documentation/move.gif)
 
 ---
 
