@@ -32,7 +32,8 @@ keypad_base L0
 
 shift_reg #(.COUNT(11), .START(44'd0)) L1  //For Arithmetic Unit
 (
-	.trig(valid_digit),
+	.clk(clk),
+	.pre(valid_digit),
 	.in(singleBCD),
 	.out(BCD_A),
 	.reset(reset)
@@ -40,7 +41,8 @@ shift_reg #(.COUNT(11), .START(44'd0)) L1  //For Arithmetic Unit
 
 shift_reg #(.COUNT(11), .START(44'hfffffffffff)) LL1 //For Output Unit
 (
-	.trig(valid_in),
+	.clk(clk),
+	.pre(valid_in),
 	.in(singleBCD),
 	.out(BCD_I),
 	.reset(reset)
@@ -48,7 +50,8 @@ shift_reg #(.COUNT(11), .START(44'hfffffffffff)) LL1 //For Output Unit
 
 Counter LC
 (
-	.left_right(valid_LR),
+	.clk(clk),
+	.pre(valid_LR),
 	.value(singleBCD),
 	.reset(reset),
 	.count(count)
